@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H & M structure</title>
+
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns:repeat(12,80px);
+            grid-template-rows: repeat(60,60px);
+            grid-gap: 15px;
+            justify-content: center;
+
+        }
+        #container>div{
+            border: 1px solid black;
+        }
+        #a{
+         background-color: aqua;
+         grid-area: 1/1/4/13 ;
+        }
+        #b{
+         background-color: rgb(8, 0, 255);
+         grid-area: 4/1/5/13 ;
+        }
+        #c{
+         background-color: rgb(120, 117, 197);
+         grid-area: 5/2/13/12 ;
+        }
+        #d{
+         background-color: rgb(0, 141, 2);
+         grid-area: 13/1/15/13 ;
+        }
+        #e{
+         background-color: rgb(229, 136, 110);
+         grid-area: 15/2/23/12 ;
+        }
+        #f{
+         background-color: rgb(197, 205, 78);
+         grid-area: 23/2/31/12 ;
+        }
+
+       #g{
+         background-color: rgb(236, 37, 222);
+         grid-area: 31/2/39/12 ;
+        }
+
+        #h{
+         background-color: rgb(16, 8, 232);
+         grid-area: 39/2/47/12 ;
+        }
+        #i{
+         background-color: rgb(31, 129, 29);
+         grid-area: 47/1/54/13 ;
+        }
+        #j{ 
+         background-color: rgb(26, 193, 219);
+         grid-area: 54/1/60/13 ;
+        } 
+
+        .bg1{
+            background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1200],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s04/november_2021/4114n/4114N3x2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+            background-size: 100%;
+
+        }
+        .bg2{
+            background-image: url(https://media.gettyimages.com/photos/happy-girlfriends-picture-id619531868?s=2048x2048);
+            background-size: 100%;
+
+        }
+        .bg3{
+            background-image: url(https://media.gettyimages.com/photos/stylish-diverse-friends-sitting-on-street-at-party-picture-id1305017007?s=2048x2048);
+            background-size: 100%;
+
+        }
+        .bg4{
+            background-image: url(https://media.gettyimages.com/photos/peace-love-and-beauty-picture-id187023951?s=2048x2048);
+            background-size: 100%;
+
+        }
+        .bg5{
+            background-image: url(https://media.gettyimages.com/photos/four-beautiful-girls-celebrate-christmas-picture-id877787668?s=2048x2048);
+            background-size: 100%;
+
+        }
+        
+        #text{
+               text-align:center;
+               color: white;
+               
+        }
+        #space{
+            width: 100%;
+            height: 60%;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="a">1</div>
+        <div  id="b">2</div>
+        <div  id="c" class="bg1">
+           
+            <div id="space"></div>
+            <div id="text"><h3 id="within">Online deal</h3>
+            <h4>Kids faves - now from Rs.999</h4>
+            <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p> </div>
+
+        </div>
+
+        <div  id="d">4</div>
+        <div  id="e" class="bg2">
+   
+            <div id="space"></div>
+            <div id="text"><h3 id="within">Online deal</h3>
+            <h4>Kids faves - now from Rs.999</h4>
+            <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p> </div>
+        </div>
+
+        <div  id="f" class="bg3">
+            <div id="space"></div>
+            <div id="text"><h3 id="within">Online deal</h3>
+            <h4>Kids faves - now from Rs.999</h4>
+            <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p> </div>
+        </div>
+
+        <div  id="g" class="bg4">
+            <div id="space"></div>
+            <div id="text"><h3 id="within">Online deal</h3>
+            <h4>Kids faves - now from Rs.999</h4>
+            <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p> </div>
+        </div>
+
+        <div  id="h" class="bg5">
+            <div id="space"></div>
+            <div id="text"><h3 id="within">Online deal</h3>
+            <h4>Kids faves - now from Rs.999</h4>
+            <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p> </div>
+        </div>
+        
+        <div  id="i">9</div>
+        <div  id="j">10</div>
+
+    </div>
+    
+</body>
+</html>
