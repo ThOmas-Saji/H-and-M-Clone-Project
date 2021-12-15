@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H & M structure</title>
+
+    <style>
+        #main{
+            display: grid;
+            grid-template-columns:repeat(12,1fr);
+            grid-template-rows: repeat(60,1fr);
+            grid-gap: 15px;
+            justify-content: center;
+            text-align: center;
+        }
+        #header1{
+            display:flex;
+           
+        }
+        #header1 > .header1{
+            width: 30%;
+            border: 1px solid red;
+            display:flex;
+            justify-content: space-between;
+        }
+        .header1:first-child{
+            margin-right: 60%;
+        }
+        .logodiv{
+            width:100%;
+            border: 1px solid red;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 4%;
+        }
+        .logodiv > img{
+            width: 50px;
+            height: 50px;
+        }
+        .categories{
+            margin: auto;
+            /* width:700px; */
+            display:flex;
+            justify-content: space-between;
+        }
+        #main>div{
+            border: 1px solid black;
+        }
+        #header{
+         background-color: aqua;
+         grid-area: 1/1/4/13 ;
+        }
+        #member{
+         display: flex;
+         justify-content: space-evenly;
+         grid-area: 4/4/5/10 ;
+        }
+        #first{
+         background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1200],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s04/november_2021/4114n/4114N3x2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+         background-size: 100%;
+         background-color: rgb(120, 117, 197);
+         grid-area: 5/4/13/10 ;
+         background-repeat:no-repeat;
+         background-size: 100% 100%;
+         background-position: center center; 
+        }
+        #first > #text > input:last-child{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        #second{
+         background-image: url(https://i.pinimg.com/originals/ba/3d/27/ba3d27bf605497402afd35c016e8c631.png);
+         background-color: rgb(0, 141, 2);
+         object-fit: fit;
+         text-align: center;
+         grid-area: 13/4/15/10;
+         height: 140px;
+        }
+        #second > input:last-child{
+            width: 100px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+        #third{
+         background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/ladies_s04/november_2021/1304f/1304F-3x2-soft-as-stardust.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+         background-color: rgb(229, 136, 110);
+         background-size: 100%;
+         grid-area: 15/4/23/10 ;
+        }
+        #fourth{
+         background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/men_s04/oktober_2021/3045a/3045A_3x2-the-holiday-party.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+         background-color: rgb(197, 205, 78);
+         background-size: 100%;
+         grid-area: 23/4/31/10 ;
+        }
+
+       #fifth{
+         background-image: url(https://drive.google.com/file/d/1GyQZD5ulsFkRJveSEzN4NraYO3jrfNf0/view?usp=sharing);
+         /* background-color: rgb(236, 37, 222); */
+         background-size: 100%;
+         grid-area: 31/4/39/10 ;
+        }
+
+        #sixth{
+         background-image: url(https://res.cloudinary.com/twenty20/private_images/t_standard-fit/photosp/f8ee0d18-a89e-41a6-8b09-a0f88cc70857/stock-photo-copy-space-celebration-christmas-wrapped-background-holidays-gifts-top-view-new-year-f8ee0d18-a89e-41a6-8b09-a0f88cc70857.jpg);
+         background-size:100%;
+         grid-area: 39/4/47/10 ;
+        }
+        #seventh{
+         background-color: rgb(244,237,221);
+         grid-area: 47/4/54/10 ;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: repeat(4, 1fr);
+        }
+        #one{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            text-align: center;
+        }
+        .two {
+            grid-row-start: 2;
+            grid-row-end: 5;
+            text-align: center;
+        }
+        #seventh > div > img{
+            width: 90%;
+            height: 230px;
+            padding:10px;
+
+        }
+        #eigth{ 
+         border:1px solid green;
+         background-color: rgb(26, 193, 219);
+         grid-area: 54/1/60/13 ;
+         display:grid;
+         grid-template-columns: repeat(6,1fr);
+         grid-template-rows: repeat(3,1fr);
+         padding: 30px 0 0 0;
+        }
+        #shop {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            border:1px solid green;
+        }
+        #corp {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            border:1px solid red;
+        }
+        #help {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            border:1px solid yellow;
+        }
+        #news{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            border:1px solid white;
+        }
+        #news > input{
+            border: transparent;
+        }
+        #contact {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            border:1px solid pink;
+        }
+        #contact > img{
+            padding: 2px 20px;
+            width: 25px; 
+            height: 25px;
+        }
+        #text{
+               text-align:center;
+               color: white;   
+        }
+        #space{
+            width: 100%;
+            height: 60%;
+        }
+        .categories > ul {
+            background: lightgrey;
+        }
+        .categories ul {
+            list-style: none;
+            position:relative;
+            margin: 0 auto;
+            justify-content: center;
+            padding: 0;
+            text-align: left;
+            float: left;
+            display: flex;
+        }
+        .categories ul a{
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 32px;
+            padding:0 29.7px;
+            display: block;
+        }
+        .categories ul li{
+            background: lightgray;
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .categories ul ul{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+        .categories ul ul li{
+            width: 1000px;
+        }
+        .categories ul li:hover > ul{
+            display:block;
+        }
+        ul > div{
+            background-color: lightgray;
+            width:100%;
+        }
+        .categories ul ul ul{
+            position:relative;
+            display:block;
+        }
+        .categogies > div>div{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+
+        <div id="header">
+            <div id = "header1">
+                <div class = "header1">
+                    <p>Customer Service</p>
+                    <p>Newsletter</p>
+                    <p>Find a store</p>
+                </div>
+                <div class = "header1">
+                    <p>Sign in</p>
+                    <p>Favourites</p>
+                    <p>Shoping bag</p>
+                </div>
+            </div>
+            <div class = "logoDiv">
+                <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAkFBMVEX/////ABv/AAD/ABf/ABj/ABT/AAz/ABD/AAr/AAb/lZn/3t//1tj/7u//gYb/6uv/z9H/+fr/s7b/ubz/Ulr/5OX/bXP/RE3/en//xMb/r7L/mp7/IS//w8X/kpb/SVL/OUP/y83/pKf/Kzf/Y2r/anD/iI3/qKv/e4D/XGP/GCj/MT3/oKT/PUf/UFj/WF86aH6NAAARcUlEQVR4nO1daVvbvBKtlcUJJISQkpTlZWmBAqH0//+7Gy8abWdkKbHl9D7MtzbItuRZzpwZyd++fcmXfMmX9CnLT/Hnd98PkVoWL7+EGD5dx47biGwk/nbxREcry7UQoywbjsV4FjPu/LvIdiIeu3qwI5RrMc1qGYjz4GHLN5GXg8ZvHT7ccclFJoYZyVAsA8fNR7TEotMHPB55fBeDTBdxFjZwOc7VmCjj/WflxVqqYuZhqvUw1obcdPyYRyEXwl6q3cwvQkbe6CNH264f9AhkqXsrKeOngJFzc5XFvPNn7V1ugGLtXHzAyOfJHtr4b8sYKFaQmlxaqzxZJ3jaduTyY7s+W99dxY57RIq1W6xmqGUpVjYc7vXgyWV2976D35PpRIhYz2FPOdim5s4qB6OzHmXxsVspCv4izhiWWLEy8dE08uwfXKzrW2HApNFt1HCEG8qJnzQMBKssLvefRhLZFMmvLpGL9Td35lxN/KVhIAii4r/955FCtlP7ifMoroSzwubFyt0gKnonta7Wm/ef3I8/wOu9i7k6Z4WNi7VCsD8wo+xM/opJPuBC0ww9cTi9Ulx+7F6hukyDz/o1cscEwf4OZVMux+gB/7p1nzgIeivhFCsTrDaXco4GTn9E3btteRG+FbgCTzx9jbk+MqZ6sfw4C8aFxgjaqZzWcxmO4c9AsSKt8Imzwkx4UwE70wla4I7lvn5/+Qb9+h944sF71A1YxcrEqW/cDycIx7+oloX8Nw4zyMfGWQJvhX40zgCOXjkaMhJoE0ixGhSCvQG4kG/cHbNYUbNrV1SmCp/iFijW6E/MDVhEujP8e99ARBdyziKRfMi5QKIIK9Yq5gbX/GJNfCiAGRcXiFsW8knQcSKPFQmyuLwwa6g+vDv1jWpMj9kOhWcY4RDGin23vGJ5UQC8ddZvTZq8KKSW/kBUGFW64ybdNPF7jqhYRM6wRcmksqMojrLCWJB1BsFS47Kfsrl37AzbE8q+YBPBGwr6kelGhl1PdSmex/uBeehsEEektSpr+UyIUmPSjSimEl9DXorFlyzeGD/HT7IloWeCEQ6mG5Ec6W/vYrHDYJmxHNJfGk1TQbwHfruRzQafPHDwmRRgSOvbR2G8VmXrA1n47cZZoQe++0zKQ+r0Vq6gkDPIwK+wiDz6FXUHllAuJ86aFKKF6jGxc2xNKKwjSh2/3RatkDcpCFmqd9VfEw2lqki5H+DbbdEKeZjF8xTebLJTId1B7DtGhZFW6KGyMp7Nckv2aoiftO9QKKNAyekaosJIK/RQWRnvf148i9VXZqgxWe4r5mjKuMzMq1is/8FEVnX/vmjSE0p1QHn5A1thnH+FbBgJVwD0EGDD6R7zbEVUDg2iEk7pmrteDMGmTBdjytGIQ6slrmugRVH9ZcB3MMRKm1bIOWtYWZVDoroGWpRn6XxROP4O8VGkFTLtfjRzDLN8QaGvZEd5cJDqLBjFirNCXPdTV4MFQA9u6C/ZoRx6OHB/ZIJ3ZCzyRDV+5ifexdprqocL1biQH8DT5DpHGPE5n/LGEJNOPCvcVxlMpV+gYsqkv5Hw2UcoZ1zdw4v5pz21ZlFURwkMTgtjrdCnIxkXWTfezLufnhDNvbvqwhQL4grRHuqgFFz38LLQkW0DrYkC6EBdmGJBpBV6MrxC8u9okN90e/LvBNDzT+c3tmk9zgp9ZZ2MI1v2Sya7FQXQgRv4iZ/Y38XhCFv4kzdGYNyTFma9NUiqci/Q7FumySBuv7wXL2VMz4InLeSGdC7KjU7cmgHnmCOtEPUqGZcDmUtDTOhny++r2p/tNrAxVEGkw/CHtQwnO36Wop9dO8qDg9oq697jYiHmw/TruYrqZ+x7qtyrKjGAxFwJOTJsK3A5gmgAwayGBe5nW6ZqEwNegPE1kZmG4g5Gf07QaiHkQM81wtte+yhWKDcK+hZY9x5XKVDZpTiHugogCyXe+ectWq1eeroVQAexmGv1ieRIicHbxQXYBgD4GdU2PX+Hi9WHfxe+27PdK3FhWynWNW7Rdl0gWa44g08xRC0GXYsiQUB5hYXQ+dv1efib1fj9JU4S3cUiBdwNQSN62Q2m9rMBXMi0CBerJYT4DN11T/lwQdchywbEkMwlxQvGEH0crDL3WaG36aVYsMDoTWtesPao2dLlHK40xYIlAP+mqG5EgRlQhOMVSz5x0AZlBd8LP74BYMRFIrJdvsiWYUjuo01ZA1nOxJ+aYHdglyKBhbLvC70BBzORMhVrgvd1tDH7OFFVBBtDz+6EPzUrnziocEebKsqiM5y5/aJkFCi7phFJBIi3zkWVMM2X+zsTDZWrcoHzkHtonPUpk/E5BLHQf0B8aeNG/fZFd++UyS5Xa+GeBIYkDEQT/iiZCsg/2LFFGm7Vo4Lq4T0UKxQlVxcBl7PzZxFgf9UDh1XP/xp9X9hbW0OkX6uwL8oNeyhWKFMr4tHs43WHnrwNZ5oMQ4O3WQxBlUAbZkmPXlVRseG2vBLNogH0/Plu56b8dVBrrQLfLcWySnlRHp1bm1/khqrqdSBd7IHM0vmXPMxNkQQ3ZVA/SNVHglJDqxotV6cO0Agap9+G0lRx8a5VcL2C+ucrGImyHSt1kSG6DtAomUyf7OCuqyAJL4TNTCv89tYY2hTfUMVItPc1+dlG7sFd4RKebJBe1N1cf9BZB1dohMyBYDBM2pl1ejc+ZK3CIeHAtEKc7RjsmDAH9B0Mz8+CADorYci9FGWFNTyAU9dLOzK5kYk9CoaRmxX2l/MzEQjQWYmgR9Sm6zrnbgTwRGTVND8KhmkqO4u7oZgeoFPVNCKaDNTRBxUsazQqCcuGo/o/ENZIEQxXm0N1qpDpQ/gdKbLJXXmoodYgPGTfBXWKPIOUovNgOL8TYn+soD1oTOGebEiGBITt9LY4yrMp3qG+w44zw9nTQS5dTSzuSFK1Q70mKFAbrs7RSjyjXHjyYHi+Cc6P/SJ+xZU2qZFUTg/t1dDdNSmWxKnIbjs8I3hx8t6K/RXJc2TJnIyKeplQbNMYeJlmqy1MCDl0RpMun9pw6pVEuwqiGIj6QhSx1vVHRBaR+4jS6epoo8UkgnZpWqvorTIUyQhJoQ5Ata2F6ByFvPwD2pXbdgywkMhTZwqRMUXFO0ghEIMht9lrTTWoo60j5NC0ByRG4ns4L234zjA0UmPpaTV7h4l3N8jBv3k0crGi21aUy6JMGe2II0VBB1mG1DfaklbAVSlu1Xh+s/7wvmO5Mlr7JTrZQWaBBFg1M4PIoSuY1dRSHS42hXT9IMREiAdP85F8UxoJDPF4fQn5/YGBBqMg59DZbrAbYR/evp/k5ladRVZfNudL+OrIU8VBQzqrUk/FkGppMkIOXXIOF9s2tMumftUbYAM5NZ1ovKqnHv3i4gZ8XFC3nEND65AhHIA1/cRWdz0cxyz9tY45PIsljdZQHIgcut0a7T/XRMpI7OQdAzNT9WWGVyFe5vx6oq50wM0v1soNnd9wg1LXWyuYs3Y1GQuxfVntnPg9PqHHwIH1+56clT0bDMmr4LjSBE9biNRDs2e6kYXuQv56V2unU0+r2lPgHaemFdb8524VhPujFMKf2uTgZvpysRSA1bFvT9WKXxxHU3SHbtUDYsxvtbvW1anB9qxYEAb3yFXXS+2447FYLOjew9pI2pdlhpzRTqU+71a6WuPOd6vDRzLrg/KPccX1FLks3HBULBa5d6Mwj5ztHjlqtMzfnRvn4uHCzhwg5Ld1x4xROGn8CVwW7hgoFot6VMy9G2j/Tpo+h2f7u54bN6zgM1Dsoqr5wnGqptqyNMXFZnWqelSoqFMJOmUkUZ/D1UjXG0h7vuJvH9jVcn3OTPu+XdcpBXrE3WKpTm5z+y9MJVP1ObyooiFOGmAsdL2EXp/Cm55Ih4z7cItFKaP1Woa9Nv1pPekId+NdYG5rg94GhxtqVK6jNydBKxeX9N/2kS0pCRpXCOjgMywwSeE22mqLyrxo2khh/A4P4hIL2rRutX3h4HnA9ONEOQdIFsCTVACOUrOQfImtp8Iugpm312W0UQ3m5kWQIiY8zkE1LaICIN6WDLybmvSkRFGrd2G6LlpNs2yFj3ijN2SXbdCutISfcMcvXApzzK2b5avvhJb4/G0HSgaGL1lhDfZ9aCBzTRo2hSTbLkBzwO+HOY3U8ah6HBCr00FFPuj4R2UvhsL5j7LLbT8KCZpk2wXUXlrICUH47tZ/l7mObqeDkbv+BJDMlfZXm5yHgqWdZGdfKOCA4i+eipPNLC3OSzLt+mIJkEWzd5DXmdgPhE4KTxYMZ9jtSsHHNjmAjCEwdPBN7IJ1uo73xBQ3QKM0OtneaIJROPeFnLJD7a2ZCevgWxF/pofxf8PC1nb01/igrS5EZRUIvuNNBPb75ixpqpMBqpXUjG/MIZ6luKcGoVsl+94VwSi89YWB71Y4Z85pGhp6oSgH5gnQjRzPDT9Ym2pvhTIOiFXgMliciXzbQ7uR0Oxglj86vpFfLIDMEZuV7NTbVy98xyZiV+2rusJAXF0Zq2VSK2qLs33gGvwSRvWnLn6CW1hTnaoiHTgmzfF5dRYBU4WzYUHo6UYizK37SoXtjnmEnNhngl0kiTai0PvGpxHieVhzqJ6/MmO1WCOL8FJR165aoUbtTF2y+YlSwaxr9n0Xgo98tpLo2kFXyEOjaazgKvkZlzVkC5goPoNvE3XWQWOLynXQr/jcGcuf1o0AZTO2QhoOQS09k6vCXG0cUoiIoIk7SnZ/ISuE5RH4jTkbKMpCmXi9nFHwdEC16odxnDaHSlGQQ7qe6jy2GT+FQuAsbLxMx9FNtU4mB/qodkfXG+PFgl+jQJg01ccFblivWwhmmuy0CB5a6mwBViVD9z6MAiPeFjX/pIJZ0mxwHwdTA5vja5h/ZAcyaazowHbGNSISBHZ1p0EOqvMCwndUdHJRNfzYlxPzZAqK7gSDLvZEEGbtM/V4UVaIMDDzWUzbG+F91XZWR3dC5VC4PxwSesDmU53noLZJol8Z+G6XuRiS3tSghdc5AkqLKdigakWaw+toBvh+6AQB8PEPjFwtLyiJdjsHr+XZuQZzSER/wVA18MMnC0qid/Ld9CN53dUGb8UVrTI7SmBHhOicRNUKxTBFlO3dLoaFzjXk4u2h/Lc5W0kWcGqwsNgdxrbgYqXhHIj3g61g+Bxj9MYfaZvnQGzmBT7Ls4mpQvIkktBPYTIrgEw+zWfnVB8ebC2GUBGb0eWnENPxZIfgK8A6fxAW+KHDBlhMZGwp4koQcLHCZnugrLzhHBcMuW1gi9+vT+sTZaKnFqL04HcpuiZz1goWK/K7SPuKYpgQVsYk6Z6nW8qLeQ/3+cHzO1IA9EuURkuni98NhE/7nmEiPZL/XM57afjo25OlgGJTV1tYLSFuBc4AHw69J6aRK+8/Bn05bfJsIEInOvaWwjlMLFAKsndTgYRZDR16p6WfzHnkhDQrzbG3N7KCBX9FioW+3RcktXtsTOPOi61CnzyLABx8ojS6DtZ4TxLuRty3D6pW4mZnPH+046gpQzuRjvww0t4yVyUsV/Dhxfu29tTu8fDSsdOnkqyP7bsY5YJpIUeEHJMFB0jdFXh4u7qj8Mmq0cv19v6F8Y+wp2Dvt1iXBlvgNJ+sxr8+jjV3BPms/Vvzq97GNgp8lovv5bMVrtw70OGArVcVm9oK2DZZeFxITy5uunOAe67yvnbIFLP5pKfPRtviVJ0OcA9luW/cztkLRh9NL1/aQWJVIg766vB7gTbbIZ70lCddg2SjmB+sOIi+nZ+8fLSlBNpZ2cdihYVsdP6vr29/O6JQDazw9yVLzZn28zk8KKTx/XxVlBMt6Ul+KLZH3qrNypN+vu3LimIvj8YKC7nIioBxeyyhUMrD+OjiTimz3z/jvqeYQpbD/OjizvHKfFzoVt7Lp2H/PVlui9PWjiG5/yfkYn1ybK70S77kS/4f5H9YMNXAXllU0QAAAABJRU5ErkJggg==" placeholder = "H&M logo" style = "width:60px; height:60px;" />
+            </div>
+            <div class = "categories">
+                <ul>
+                    <li>
+                        <a href="#">Ladies</a>
+                        <ul>
+                            <div>
+                                <li><b>New Arrivals</b></li>
+                                    <ul>
+                                        <li>View All</li>
+                                        <li>Clothes</li>
+                                        <li>Shoes & Accessories</li>
+                                        <li>Lingerie</li>
+                                    </ul>
+                                <li><b>Trending Now</b></li>
+                                <ul>
+                                    <li>Jackets from Rs.2299</li>
+                                    <li>Seasonless Swimwear</li>
+                                    <li>Gift Guide</li>
+                                    <li>Party Edit</li>
+                                    <li>Music, Movies and Logos</li>
+                                    <li>A Circular design story</li>
+                                </ul>
+                                <li><b>Deals</b></li>
+                                <ul>
+                                    <li>Socks-Buy 2 get 1 free!</li>
+                                </ul>
+                                <li><b>Shop By Product</b></li>
+                                <ul>
+                                    <li>View All</li>
+                                    <li>Tops & T-shirts</li>
+                                    <li>Dresses</li>
+                                    <li>Shirts & Blouses</li>
+                                    <li>SweatShirts & Hoodies</li>
+                                    <li>Cardigans & Sweaters</li>
+                                    <li>knitwear</li>
+                                    <li>Blazzers</li>
+                                    <li>Jacket & Coats</li>
+                                    <li>Basics</li>
+                                </ul>
+                                <li><b>Sustainability</b></li>
+                                <ul>
+                                    <li>Our Products</li>
+                                    <li>H&M Take Care</li>
+                                    <li>Learn More</li>
+                                </ul>
+                                <li><b>Magzine</b></li>
+                                <ul>
+                                    <li>Magazine</li>
+                                </ul>
+                                <li><b>Shop by Occasion</b></li>
+                                <ul>
+                                    <li>Party Wear</li>
+                                    <li>Casual Wear</li>
+                                    <li>Office Wear</li>
+                                    <li>Laungewear</li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Men</a>
+                        <ul>
+                            <li><b>New Arrivals</b></li>
+                            <li><b>Deals</b></li>
+                            <li><b>Trending</b></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Baby</a>
+                        <ul>
+                            <li><b>New Arrivals</b></li>
+                            <li><b>Deals</b></li>
+                            <li><b>Trending</b></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Kids</a>
+                        <ul>
+                            <li><b>New Arrivals</b></li>
+                            <li><b>Deals</b></li>
+                            <li><b>Trending</b></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Divided</a>
+                        <ul>
+                            <li><b>New Arrivals</b></li>
+                            <li><b>Deals</b></li>
+                            <li><b>Trending</b></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sale</a>
+                        <ul>
+                            <li><b>New Arrivals</b></li>
+                            <li><b>Deals</b></li>
+                            <li><b>Trending</b></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sustainability</a>
+                        <ul>
+                            <li><b>New Arrivals</b></li>
+                            <li><b>Deals</b></li>
+                            <li><b>Trending</b></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div  id="member">
+            <p>Become a member & earn 100 welcome points.</p>
+            <p>Estimated delivery time:2-7 days</p>
+            <p>download the H&M App</p>
+        </div>
+        <div  id="first" class="bg1">
+            <div id="space"></div>
+            <div id="text">
+                <h3 id="within">Online deal</h3>
+                <h1>Kids faves - now from Rs.999</h1>
+                <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p>
+                <input type = "button" value="Shop Now">
+            </div>
+        </div>
+
+        <div  id="second">
+            <h2>Snuggle up in soft knitwear starting Rs. 699</h2>
+            <p>The knits you need, now!</p>
+            <input type = "button" value="Shop Now">
+        </div>
+
+        <div  id="third">
+            <div id="space"></div>
+            <div id="text">
+                <h1 id="within">Soft as stardust</h1>
+                <h4>Velour jumpsuits, quilted trousers, satiny slip dresses & other luxe looks</h4>
+                <input type = "button" value="Shop Now"> 
+            </div>
+        </div>
+
+        <div  id="fourth">
+            <div id="space"></div>
+            <div id="text">
+            <h1 id="within">The Holiday Party</h1>
+            <p>Comfy Style. Made Smarter.</p>
+            <input type = "button" value="Shop Now"> 
+        </div>
+        </div>
+
+        <div  id="fifth" class="bg4">
+            <div id="space"></div>
+                <div id="text">
+                <img src = "https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/men_s04/november_2021/3275a/3275-smiley-x-hm-CPD-logo.png]&scale=width[global.width],height[15000],options[global.options]&sink=format[png],quality[global.quality]" style = "width:800px; height:100px"/>
+                <h4>Put a smile on your style</h4>
+                <input type = "button" value="Shop Now">
+            </div>
+        </div>
+
+        <div  id="sixth" class="bg5">
+            <div id="space"></div>
+                <div id="text">
+                <h1 id="within">Ho-Ho-Ho! It's holiday time.</h1>
+                <p>Time to find your kids' fav for the season.</p>
+                <input type = "button" value="Shop Now">
+            </div>
+        </div>
+        
+        <div  id="seventh">
+            <div id="one" style = "border:1px solid">
+                <h1>MAGAZINE</h1>
+                <P>A WORLD OF INSPIRATION</P>
+                <U>READ H&M MAGAZINE</U>
+            </div>
+            <div class="two" style = "border:1px solid red">
+                <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/6204-Holiday-BTS-still-0807-739.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
+                <p>INSIDE H&M</p>
+                <p><b>Sharing is always a season</b></p>
+            </div>
+            <div class="two" style = "border:1px solid yellow">
+                <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/HM-TOP-Sweater-Vest-Article-Image-v2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
+                <p>INSIDE H&M</p>
+                <p><b>How to Wear a Sweater Vest</b></p>
+            </div>
+            <div class="two" style = "border:1px solid orange">
+                <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/2094-Magazine-01-3x2-Landscape-1688x1126.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
+                <p>INSIDE H&M</p>
+                <p><b>A circular design Story</b></p>
+            </div>
+        </div>
+
+        <div  id="eigth">
+            <div id = "shop">
+                <b>SHOP</b>
+                <p>Ladies</p>
+                <p>Men</p>
+                <p>Baby</p>
+                <p>Kids</p>
+            </div>
+            <div id="corp">
+                <b>CORPORATE INFO</b>
+                <p>Career at H&M</p>
+                <p>About H&M group</p>
+                <p>Sustainability</p>
+                <p>Press</p>
+                <p>Investor relation</p>
+                <p>corporate governance</p>
+            </div>
+            <div id = "help">
+                <b>HELP</b>
+                <p> Customer Service</p>
+                <p>My H&M</p>
+                <p>Find a Store</p>
+                <p>Legal & Privacy</p>
+                <p>Contact</p>
+            </div>
+            <div id = "news">
+                <b>SIGN UP FOR NEWS LETTER</b>
+                <p>Sign up now and be the first to know about exclusive offer, latest fashion news and style tips!</p>
+                <input type ="button" value = "SIGN UP->">
+            </div>
+            <div id = "contact">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-256.png" alt="fb"/>
+                <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-256.png" alt="twitter"/>
+                <img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-256.png" alt="insta"/>
+                <img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Youtube_glyph_svg-256.png" alt="youtube"/>
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Pinterest_svg-256.png" alt="pinterest"/>
+                <p style = "width: 800px; margin: auto;">
+                    The content of this site is copyright-protected and is the property of H & M Hennes & Mauritz AB. 
+                    H&M’s business concept is to offer fashion and quality at the best price in a sustainable way. 
+                    H&M has since it was founded in 1947 grown into one of the world's leading fashion companies.
+                </p>
+                <img src = "https://www.vectorkhazana.com/assets/images/products/Hennes-Mauritz-Logo.jpg" width="300px" height="30px" />
+                <p>INDIA | Rs.</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+</script>
