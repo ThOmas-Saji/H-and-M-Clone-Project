@@ -86,7 +86,7 @@
             width: 100px;
             height: 30px;
             /* background-color: black; */
-            color: white;
+            color: black;
             border-radius: 5px;
         }
         #trending{
@@ -140,29 +140,56 @@
             grid-area: 39/4/47/10 ;
         }
         #seventh{
-            /* background-color: rgb(244,237,221); */
-            grid-area: 47/4/54/10 ;
+            background-color: rgb(244,237,221);
+            grid-area: 47/1/54/13 ;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(3, 135px);
         }
         #one{
             grid-column-start: 1;
-            grid-column-end: 4;
+            grid-column-end: 8;
             grid-row-start: 1;
             grid-row-end: 2;
             text-align: center;
+            margin-bottom: 10px;
         }
-        .two {
+        #two{
+            grid-column-start: 3;
+            grid-column-end: 4;
             grid-row-start: 2;
-            grid-row-end: 5;
+            grid-row-end: 3;
             text-align: center;
+            height:400px;
+            background-color: white;
+            margin-right: 25px;
+            margin-top: 10px;
+        }
+        #three{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: center;
+            height:400px;
+            background-color: white;
+            margin-right: 25px;
+            margin-top: 10px;
+        }
+        #four{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: center;
+            height:400px;
+            background-color: white;
+            margin-right: 25px;
+            margin-top: 10px;
         }
         #seventh > div > img{
-            width: 90%;
+            width: 100%;
             height: 230px;
-            padding:10px;
-
         }
         #eigth{ 
             /* border:1px solid green; */
@@ -172,6 +199,11 @@
             grid-template-columns: repeat(6,1fr);
             grid-template-rows: repeat(3,1fr);
             padding: 30px 0 0 0;
+        }
+        #eigth input{
+            width:100px;
+            height: 30px;
+            background: transparent;
         }
         #shop {
             grid-column-start: 2;
@@ -832,7 +864,7 @@
             </div>
         </div>
 
-        <div  id="sixth" class="bg5">
+        <div  id="sixth">
             <div id="space"></div>
                 <div id="text">
                 <h1 id="within">Ho-Ho-Ho! It's holiday time.</h1>
@@ -842,22 +874,22 @@
         </div>
         
         <div  id="seventh">
-            <div id="one" style = "border:1px solid">
+            <div id="one">
                 <h1>MAGAZINE</h1>
                 <P>A WORLD OF INSPIRATION</P>
                 <U>READ H&M MAGAZINE</U>
             </div>
-            <div class="two" style = "border:1px solid red">
+            <div id="two">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/6204-Holiday-BTS-still-0807-739.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
                 <p><b>Sharing is always a season</b></p>
             </div>
-            <div class="two" style = "border:1px solid yellow">
+            <div id="three">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/HM-TOP-Sweater-Vest-Article-Image-v2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
                 <p><b>How to Wear a Sweater Vest</b></p>
             </div>
-            <div class="two" style = "border:1px solid orange">
+            <div id="four">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/2094-Magazine-01-3x2-Landscape-1688x1126.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
                 <p><b>A circular design Story</b></p>
