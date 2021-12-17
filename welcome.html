@@ -338,7 +338,7 @@
                     <p>Find a store</p>
                 </div>
                 <div class = "header1">
-                    <p>Welcome</p>
+                    <p id="name">Welcome</p>
                     <p>Favourites</p>
                     <p>Shoping bag</p>
                 </div>
@@ -948,5 +948,10 @@
 </html>
 
 <script>
+var username=JSON.parse(localStorage.getItem("userDatabase"));
+var currentuser = JSON.parse(localStorage.getItem("currentuser"));
+console.log(currentuser);
 
+currentuser.map(function(elem){
+});
 </script>
