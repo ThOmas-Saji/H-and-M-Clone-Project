@@ -82,19 +82,33 @@
             background-size: 100% 100%;
             background-position: center center;
             overflow: hidden;
+<<<<<<< Updated upstream
             cursor: pointer;
+=======
+            padding-bottom: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+>>>>>>> Stashed changes
         }
         #second > .button1{
             width: 100px;
             height: 35px;
             background-color: black;
+<<<<<<< Updated upstream
             font-size: 15px;
             color: white;
+=======
+            border: 1px solid;
+            color: white;
+            padding-bottom: 0;
+            margin-bottom: 1px;
+            
+>>>>>>> Stashed changes
         }
         #trending{
-            grid-area: 14/4/16/10;
             /* border: 1px solid red; */
             display: flex;
+            grid-area: 14/4/16/10;
             overflow: hidden;
             cursor: pointer;
         }
@@ -123,6 +137,11 @@
             height: 40px;
             font-size: 15px;
         }
+        #third > #text > input:last-child{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
         #fourth{
             cursor: pointer;
             background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/men_s04/oktober_2021/3045a/3045A_3x2-the-holiday-party.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
@@ -132,6 +151,7 @@
             background-position: center center; 
             grid-area: 23/4/31/10 ;
         }
+<<<<<<< Updated upstream
         #fourth >#text > .button1{
             width: 100px;
             height: 40px;
@@ -139,6 +159,16 @@
         }
        #fifth{
             background-image: url(https://www2.hm.com/content/dam/men_s04/november_2021/3275a/3275ab-smiley-x-hm-CPD-02.jpg);
+=======
+        #fourth > #text > input:last-child{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+       #fifth{
+            background-image: url(https://www2.hm.com/content/dam/men_s04/november_2021/3275a/3275ab-smiley-x-hm-CPM-02.jpg);
+            /* background-color: rgb(236, 37, 222); */
+>>>>>>> Stashed changes
             background-repeat:no-repeat;
             background-size: 100% 100%;
             background-position: center center; 
@@ -150,6 +180,17 @@
             height: 40px;
             font-size: 15px;
         }
+<<<<<<< Updated upstream
+=======
+        #fifth > #text{
+            color:black;
+        }
+        #fifth > #text > input:last-child{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+>>>>>>> Stashed changes
         #sixth{
             background-image: url(https://res.cloudinary.com/twenty20/private_images/t_standard-fit/photosp/f8ee0d18-a89e-41a6-8b09-a0f88cc70857/stock-photo-copy-space-celebration-christmas-wrapped-background-holidays-gifts-top-view-new-year-f8ee0d18-a89e-41a6-8b09-a0f88cc70857.jpg);
             background-repeat:no-repeat;
@@ -164,12 +205,17 @@
             font-size: 15px;
             cursor: pointer;
         }
+        #sixth > #text > input:last-child{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
         #seventh{
             background-color: rgb(244,237,221);
             grid-area: 47/1/54/13 ;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            grid-template-rows: repeat(3, 135px);
+            grid-template-rows: repeat(2, 150px);
         }
         #one{
             grid-column-start: 1;
@@ -192,6 +238,13 @@
             margin-top: 10px;
             cursor: pointer;
         }
+        #two > a{
+            margin-bottom: 0;
+            border:transparent;
+            background-color: transparent;
+            text-decoration: none;
+            color:black;
+        }
         #three{
             grid-column-start: 4;
             grid-column-end: 5;
@@ -204,6 +257,13 @@
             margin-top: 10px;
             cursor: pointer;
         }
+        #three > a{
+            margin-bottom: 0;
+            border:transparent;
+            background-color: transparent;
+            text-decoration: none;
+            color:black;
+        }
         #four{
             grid-column-start: 5;
             grid-column-end: 6;
@@ -215,6 +275,13 @@
             margin-right: 25px;
             margin-top: 10px;
             cursor: pointer;
+        }
+        #four > a{
+            margin-bottom: 0;
+            border:transparent;
+            background-color: transparent;
+            text-decoration: none;
+            color:black;
         }
         #seventh > div > img{
             width: 100%;
@@ -352,6 +419,11 @@
         }
         nav ul.menu-area ul li a:hover{
             /* color: #164c82; */
+        }
+        #search{
+            text-align: right;
+            border:transparent;
+
         }
     </style>
 </head>
@@ -788,19 +860,31 @@
                     </ul>
                 </nav>
             </div>
+            <div id="search" style="">
+                <input type="search" placeholder="Search products"/>
+            </div>
         </div>
         <div  id="member">
             <p>Become a member & earn 100 welcome points.</p>
             <p>Estimated delivery time:2-7 days</p>
             <p>download the H&M App</p>
         </div>
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
         <div  id="first">
             <div id="space"></div>
-            <div id="text">
+            <div id="text" onclick="kidsSection()">
                 <h3 id="within">Online deal</h3>
                 <h1>Kids faves - now from Rs.999</h1>
                 <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p>
+<<<<<<< Updated upstream
                 <button onclick = "kidsSection()" class="button1">Shop Now</button>
+=======
+                <button onclick = "kidsSection()">Shop Now</button>
+                <!-- <input type = "button" value="Shop Now"> -->
+>>>>>>> Stashed changes
             </div>
         </div>
 
@@ -912,17 +996,20 @@
             <div id="two">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/6204-Holiday-BTS-still-0807-739.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
-                <p><b>Sharing is always a season</b></p>
+                <p><b>Sharing is always a season</b></p><br><br><br>
+                <a href ="" >Read the Story &rarr;</a>
             </div>
             <div id="three">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/HM-TOP-Sweater-Vest-Article-Image-v2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
-                <p><b>How to Wear a Sweater Vest</b></p>
+                <p><b>How to Wear a Sweater Vest</b></p><br><br>
+                <a href ="" >Read the Story &rarr;</a>
             </div>
             <div id="four">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/2094-Magazine-01-3x2-Landscape-1688x1126.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
-                <p><b>A circular design Story</b></p>
+                <p><b>A circular design Story</b></p><br><br><br>
+                <a href ="" >Read the Story &rarr;</a>
             </div>
         </div>
 
@@ -979,6 +1066,10 @@
 
 <script>
     function kidsSection(){
+<<<<<<< Updated upstream
         console.log("Kids");
+=======
+        console.log("kids section");
+>>>>>>> Stashed changes
     }
 </script>
