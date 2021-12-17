@@ -294,7 +294,7 @@
             padding: 40px 40px 0 40px;
             background: white;
             text-align: left;
-            /* border-top: 5px solid; */
+            border-bottom: 5px solid;
             box-shadow: 0 5px 10px rgba(0,0,0,0.6);
             z-index: 1;
             position:absolute;
@@ -305,6 +305,7 @@
             left: 0;
         }
         nav ul li:hover ul.menu-area{
+            font-size: smaller;
             top:100%;
         }
         nav ul.menu-area h3{
@@ -335,6 +336,24 @@
             background-color: black;
             cursor: pointer;
         }
+        p>a{
+            text-decoration: none;
+            color:black;
+        }
+        u>a{
+            text-decoration: none;
+            color:black;
+        }
+        
+        u>a:hover{
+            color:grey;
+        }
+
+        /* #two > p {
+            position:absolute;
+            bottom: 0;
+            left: 0;
+        } */
     </style>
 </head>
 <body>
@@ -350,12 +369,12 @@
                 </div>
                 <div class = "header1">
                     <p><a href="login.html" style="text-decoration-line: none;color: black;">Sign in</a></p>
-                    <p>Favourites</p>
+                    <p>&#9825; Favourites</p>
                     <p>Shoping bag</p>
                 </div>
             </div>
             <div class = "logoDiv">
-                <img src = "data:image/png;base64,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" placeholder = "H&M logo" style = "width:60px; height:60px;" />
+                <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAkFBMVEX/////ABv/AAD/ABf/ABj/ABT/AAz/ABD/AAr/AAb/lZn/3t//1tj/7u//gYb/6uv/z9H/+fr/s7b/ubz/Ulr/5OX/bXP/RE3/en//xMb/r7L/mp7/IS//w8X/kpb/SVL/OUP/y83/pKf/Kzf/Y2r/anD/iI3/qKv/e4D/XGP/GCj/MT3/oKT/PUf/UFj/WF86aH6NAAARcUlEQVR4nO1daVvbvBKtlcUJJISQkpTlZWmBAqH0//+7Gy8abWdkKbHl9D7MtzbItuRZzpwZyd++fcmXfMmX9CnLT/Hnd98PkVoWL7+EGD5dx47biGwk/nbxREcry7UQoywbjsV4FjPu/LvIdiIeu3qwI5RrMc1qGYjz4GHLN5GXg8ZvHT7ccclFJoYZyVAsA8fNR7TEotMHPB55fBeDTBdxFjZwOc7VmCjj/WflxVqqYuZhqvUw1obcdPyYRyEXwl6q3cwvQkbe6CNH264f9AhkqXsrKeOngJFzc5XFvPNn7V1ugGLtXHzAyOfJHtr4b8sYKFaQmlxaqzxZJ3jaduTyY7s+W99dxY57RIq1W6xmqGUpVjYc7vXgyWV2976D35PpRIhYz2FPOdim5s4qB6OzHmXxsVspCv4izhiWWLEy8dE08uwfXKzrW2HApNFt1HCEG8qJnzQMBKssLvefRhLZFMmvLpGL9Td35lxN/KVhIAii4r/955FCtlP7ifMoroSzwubFyt0gKnonta7Wm/ef3I8/wOu9i7k6Z4WNi7VCsD8wo+xM/opJPuBC0ww9cTi9Ulx+7F6hukyDz/o1cscEwf4OZVMux+gB/7p1nzgIeivhFCsTrDaXco4GTn9E3btteRG+FbgCTzx9jbk+MqZ6sfw4C8aFxgjaqZzWcxmO4c9AsSKt8Imzwkx4UwE70wla4I7lvn5/+Qb9+h944sF71A1YxcrEqW/cDycIx7+oloX8Nw4zyMfGWQJvhX40zgCOXjkaMhJoE0ixGhSCvQG4kG/cHbNYUbNrV1SmCp/iFijW6E/MDVhEujP8e99ARBdyziKRfMi5QKIIK9Yq5gbX/GJNfCiAGRcXiFsW8knQcSKPFQmyuLwwa6g+vDv1jWpMj9kOhWcY4RDGin23vGJ5UQC8ddZvTZq8KKSW/kBUGFW64ybdNPF7jqhYRM6wRcmksqMojrLCWJB1BsFS47Kfsrl37AzbE8q+YBPBGwr6kelGhl1PdSmex/uBeehsEEektSpr+UyIUmPSjSimEl9DXorFlyzeGD/HT7IloWeCEQ6mG5Ec6W/vYrHDYJmxHNJfGk1TQbwHfruRzQafPHDwmRRgSOvbR2G8VmXrA1n47cZZoQe++0zKQ+r0Vq6gkDPIwK+wiDz6FXUHllAuJ86aFKKF6jGxc2xNKKwjSh2/3RatkDcpCFmqd9VfEw2lqki5H+DbbdEKeZjF8xTebLJTId1B7DtGhZFW6KGyMp7Nckv2aoiftO9QKKNAyekaosJIK/RQWRnvf148i9VXZqgxWe4r5mjKuMzMq1is/8FEVnX/vmjSE0p1QHn5A1thnH+FbBgJVwD0EGDD6R7zbEVUDg2iEk7pmrteDMGmTBdjytGIQ6slrmugRVH9ZcB3MMRKm1bIOWtYWZVDoroGWpRn6XxROP4O8VGkFTLtfjRzDLN8QaGvZEd5cJDqLBjFirNCXPdTV4MFQA9u6C/ZoRx6OHB/ZIJ3ZCzyRDV+5ifexdprqocL1biQH8DT5DpHGPE5n/LGEJNOPCvcVxlMpV+gYsqkv5Hw2UcoZ1zdw4v5pz21ZlFURwkMTgtjrdCnIxkXWTfezLufnhDNvbvqwhQL4grRHuqgFFz38LLQkW0DrYkC6EBdmGJBpBV6MrxC8u9okN90e/LvBNDzT+c3tmk9zgp9ZZ2MI1v2Sya7FQXQgRv4iZ/Y38XhCFv4kzdGYNyTFma9NUiqci/Q7FumySBuv7wXL2VMz4InLeSGdC7KjU7cmgHnmCOtEPUqGZcDmUtDTOhny++r2p/tNrAxVEGkw/CHtQwnO36Wop9dO8qDg9oq697jYiHmw/TruYrqZ+x7qtyrKjGAxFwJOTJsK3A5gmgAwayGBe5nW6ZqEwNegPE1kZmG4g5Gf07QaiHkQM81wtte+yhWKDcK+hZY9x5XKVDZpTiHugogCyXe+ectWq1eeroVQAexmGv1ieRIicHbxQXYBgD4GdU2PX+Hi9WHfxe+27PdK3FhWynWNW7Rdl0gWa44g08xRC0GXYsiQUB5hYXQ+dv1efib1fj9JU4S3cUiBdwNQSN62Q2m9rMBXMi0CBerJYT4DN11T/lwQdchywbEkMwlxQvGEH0crDL3WaG36aVYsMDoTWtesPao2dLlHK40xYIlAP+mqG5EgRlQhOMVSz5x0AZlBd8LP74BYMRFIrJdvsiWYUjuo01ZA1nOxJ+aYHdglyKBhbLvC70BBzORMhVrgvd1tDH7OFFVBBtDz+6EPzUrnziocEebKsqiM5y5/aJkFCi7phFJBIi3zkWVMM2X+zsTDZWrcoHzkHtonPUpk/E5BLHQf0B8aeNG/fZFd++UyS5Xa+GeBIYkDEQT/iiZCsg/2LFFGm7Vo4Lq4T0UKxQlVxcBl7PzZxFgf9UDh1XP/xp9X9hbW0OkX6uwL8oNeyhWKFMr4tHs43WHnrwNZ5oMQ4O3WQxBlUAbZkmPXlVRseG2vBLNogH0/Plu56b8dVBrrQLfLcWySnlRHp1bm1/khqrqdSBd7IHM0vmXPMxNkQQ3ZVA/SNVHglJDqxotV6cO0Agap9+G0lRx8a5VcL2C+ucrGImyHSt1kSG6DtAomUyf7OCuqyAJL4TNTCv89tYY2hTfUMVItPc1+dlG7sFd4RKebJBe1N1cf9BZB1dohMyBYDBM2pl1ejc+ZK3CIeHAtEKc7RjsmDAH9B0Mz8+CADorYci9FGWFNTyAU9dLOzK5kYk9CoaRmxX2l/MzEQjQWYmgR9Sm6zrnbgTwRGTVND8KhmkqO4u7oZgeoFPVNCKaDNTRBxUsazQqCcuGo/o/ENZIEQxXm0N1qpDpQ/gdKbLJXXmoodYgPGTfBXWKPIOUovNgOL8TYn+soD1oTOGebEiGBITt9LY4yrMp3qG+w44zw9nTQS5dTSzuSFK1Q70mKFAbrs7RSjyjXHjyYHi+Cc6P/SJ+xZU2qZFUTg/t1dDdNSmWxKnIbjs8I3hx8t6K/RXJc2TJnIyKeplQbNMYeJlmqy1MCDl0RpMun9pw6pVEuwqiGIj6QhSx1vVHRBaR+4jS6epoo8UkgnZpWqvorTIUyQhJoQ5Ata2F6ByFvPwD2pXbdgywkMhTZwqRMUXFO0ghEIMht9lrTTWoo60j5NC0ByRG4ns4L234zjA0UmPpaTV7h4l3N8jBv3k0crGi21aUy6JMGe2II0VBB1mG1DfaklbAVSlu1Xh+s/7wvmO5Mlr7JTrZQWaBBFg1M4PIoSuY1dRSHS42hXT9IMREiAdP85F8UxoJDPF4fQn5/YGBBqMg59DZbrAbYR/evp/k5ladRVZfNudL+OrIU8VBQzqrUk/FkGppMkIOXXIOF9s2tMumftUbYAM5NZ1ovKqnHv3i4gZ8XFC3nEND65AhHIA1/cRWdz0cxyz9tY45PIsljdZQHIgcut0a7T/XRMpI7OQdAzNT9WWGVyFe5vx6oq50wM0v1soNnd9wg1LXWyuYs3Y1GQuxfVntnPg9PqHHwIH1+56clT0bDMmr4LjSBE9biNRDs2e6kYXuQv56V2unU0+r2lPgHaemFdb8524VhPujFMKf2uTgZvpysRSA1bFvT9WKXxxHU3SHbtUDYsxvtbvW1anB9qxYEAb3yFXXS+2447FYLOjew9pI2pdlhpzRTqU+71a6WuPOd6vDRzLrg/KPccX1FLks3HBULBa5d6Mwj5ztHjlqtMzfnRvn4uHCzhwg5Ld1x4xROGn8CVwW7hgoFot6VMy9G2j/Tpo+h2f7u54bN6zgM1Dsoqr5wnGqptqyNMXFZnWqelSoqFMJOmUkUZ/D1UjXG0h7vuJvH9jVcn3OTPu+XdcpBXrE3WKpTm5z+y9MJVP1ObyooiFOGmAsdL2EXp/Cm55Ih4z7cItFKaP1Woa9Nv1pPekId+NdYG5rg94GhxtqVK6jNydBKxeX9N/2kS0pCRpXCOjgMywwSeE22mqLyrxo2khh/A4P4hIL2rRutX3h4HnA9ONEOQdIFsCTVACOUrOQfImtp8Iugpm312W0UQ3m5kWQIiY8zkE1LaICIN6WDLybmvSkRFGrd2G6LlpNs2yFj3ijN2SXbdCutISfcMcvXApzzK2b5avvhJb4/G0HSgaGL1lhDfZ9aCBzTRo2hSTbLkBzwO+HOY3U8ah6HBCr00FFPuj4R2UvhsL5j7LLbT8KCZpk2wXUXlrICUH47tZ/l7mObqeDkbv+BJDMlfZXm5yHgqWdZGdfKOCA4i+eipPNLC3OSzLt+mIJkEWzd5DXmdgPhE4KTxYMZ9jtSsHHNjmAjCEwdPBN7IJ1uo73xBQ3QKM0OtneaIJROPeFnLJD7a2ZCevgWxF/pofxf8PC1nb01/igrS5EZRUIvuNNBPb75ixpqpMBqpXUjG/MIZ6luKcGoVsl+94VwSi89YWB71Y4Z85pGhp6oSgH5gnQjRzPDT9Ym2pvhTIOiFXgMliciXzbQ7uR0Oxglj86vpFfLIDMEZuV7NTbVy98xyZiV+2rusJAXF0Zq2VSK2qLs33gGvwSRvWnLn6CW1hTnaoiHTgmzfF5dRYBU4WzYUHo6UYizK37SoXtjnmEnNhngl0kiTai0PvGpxHieVhzqJ6/MmO1WCOL8FJR165aoUbtTF2y+YlSwaxr9n0Xgo98tpLo2kFXyEOjaazgKvkZlzVkC5goPoNvE3XWQWOLynXQr/jcGcuf1o0AZTO2QhoOQS09k6vCXG0cUoiIoIk7SnZ/ISuE5RH4jTkbKMpCmXi9nFHwdEC16odxnDaHSlGQQ7qe6jy2GT+FQuAsbLxMx9FNtU4mB/qodkfXG+PFgl+jQJg01ccFblivWwhmmuy0CB5a6mwBViVD9z6MAiPeFjX/pIJZ0mxwHwdTA5vja5h/ZAcyaazowHbGNSISBHZ1p0EOqvMCwndUdHJRNfzYlxPzZAqK7gSDLvZEEGbtM/V4UVaIMDDzWUzbG+F91XZWR3dC5VC4PxwSesDmU53noLZJol8Z+G6XuRiS3tSghdc5AkqLKdigakWaw+toBvh+6AQB8PEPjFwtLyiJdjsHr+XZuQZzSER/wVA18MMnC0qid/Ld9CN53dUGb8UVrTI7SmBHhOicRNUKxTBFlO3dLoaFzjXk4u2h/Lc5W0kWcGqwsNgdxrbgYqXhHIj3g61g+Bxj9MYfaZvnQGzmBT7Ls4mpQvIkktBPYTIrgEw+zWfnVB8ebC2GUBGb0eWnENPxZIfgK8A6fxAW+KHDBlhMZGwp4koQcLHCZnugrLzhHBcMuW1gi9+vT+sTZaKnFqL04HcpuiZz1goWK/K7SPuKYpgQVsYk6Z6nW8qLeQ/3+cHzO1IA9EuURkuni98NhE/7nmEiPZL/XM57afjo25OlgGJTV1tYLSFuBc4AHw69J6aRK+8/Bn05bfJsIEInOvaWwjlMLFAKsndTgYRZDR16p6WfzHnkhDQrzbG3N7KCBX9FioW+3RcktXtsTOPOi61CnzyLABx8ojS6DtZ4TxLuRty3D6pW4mZnPH+046gpQzuRjvww0t4yVyUsV/Dhxfu29tTu8fDSsdOnkqyP7bsY5YJpIUeEHJMFB0jdFXh4u7qj8Mmq0cv19v6F8Y+wp2Dvt1iXBlvgNJ+sxr8+jjV3BPms/Vvzq97GNgp8lovv5bMVrtw70OGArVcVm9oK2DZZeFxITy5uunOAe67yvnbIFLP5pKfPRtviVJ0OcA9luW/cztkLRh9NL1/aQWJVIg766vB7gTbbIZ70lCddg2SjmB+sOIi+nZ+8fLSlBNpZ2cdihYVsdP6vr29/O6JQDazw9yVLzZn28zk8KKTx/XxVlBMt6Ul+KLZH3qrNypN+vu3LimIvj8YKC7nIioBxeyyhUMrD+OjiTimz3z/jvqeYQpbD/OjizvHKfFzoVt7Lp2H/PVlui9PWjiG5/yfkYn1ybK70S77kS/4f5H9YMNXAXllU0QAAAABJRU5ErkJggg==" placeholder = "H&M logo" style = "width:60px; height:60px;" onclick="logo()" />
             </div>
             <div class = "categories">
                 <nav>
@@ -888,22 +907,29 @@
             <div id="one">
                 <h1>MAGAZINE</h1>
                 <P>A WORLD OF INSPIRATION</P>
-                <U>READ H&M MAGAZINE</U>
+                <u><a href="">READ H&M MAGAZINE</a></u>
+
             </div>
             <div id="two">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/6204-Holiday-BTS-still-0807-739.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
                 <p><b>Sharing is always a season</b></p>
+                <br><br>
+                <p class = "bottom"><a href="">Read the Story &rarr;</a></p>
             </div>
             <div id="three">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/HM-TOP-Sweater-Vest-Article-Image-v2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
                 <p><b>How to Wear a Sweater Vest</b></p>
+                <br><br>
+                <p class = "bottom"><a href="">Read the Story &rarr;</a></p>
             </div>
             <div id="four">
                 <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/2094-Magazine-01-3x2-Landscape-1688x1126.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
                 <p>INSIDE H&M</p>
                 <p><b>A circular design Story</b></p>
+                <br><br>
+                <p><a href="">Read the Story &rarr;</a></p>
             </div>
         </div>
 
@@ -935,20 +961,20 @@
             <div id = "news">
                 <b>SIGN UP FOR NEWS LETTER</b>
                 <p>Sign up now and be the first to know about exclusive offer, latest fashion news and style tips!</p>
-                <input type ="button" value = "SIGN UP->">
+                <input type ="button" value = "SIGN UP &rarr;" onclick ="login()" >
             </div>
             <div id = "contact">
-                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-256.png" alt="fb"/>
-                <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-256.png" alt="twitter"/>
-                <img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-256.png" alt="insta"/>
-                <img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Youtube_glyph_svg-256.png" alt="youtube"/>
-                <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Pinterest_svg-256.png" alt="pinterest"/>
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-256.png" alt="fb" onclick="fb()" />
+                <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-256.png" alt="twitter" onclick="twitter()" />
+                <img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-256.png" alt="insta" onclick="insta()" />
+                <img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Youtube_glyph_svg-256.png" alt="youtube" onclick="youtube()" />
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Pinterest_svg-256.png" alt="pinterest" onclick="pinterest()" />
                 <p style = "width: 800px; margin: auto;">
                     The content of this site is copyright-protected and is the property of H & M Hennes & Mauritz AB. 
                     H&M’s business concept is to offer fashion and quality at the best price in a sustainable way. 
                     H&M has since it was founded in 1947 grown into one of the world's leading fashion companies.
                 </p>
-                <img src = "https://www.vectorkhazana.com/assets/images/products/Hennes-Mauritz-Logo.jpg" width="300px" height="30px" />
+                <img src = "https://www.vectorkhazana.com/assets/images/products/Hennes-Mauritz-Logo.jpg" onclick = "logo()" width="300px" height="30px" />
                 <p>INDIA | Rs.</p>
             </div>
         </div>
@@ -959,9 +985,33 @@
 </html>
 
 <script>
+
+    function login(){
+        window.location.href="login.html";
+    }
     function kidsSection(){
         console.log("kids");
         window.location.href="kids.html";
     }
+    function logo(){
+        window.location.href="landingHandM.html";
+    }
 
+    function fb(){
+        window.open("https://www.facebook.com/hmindiahm/?brand_redir=21415640912","_blank");
+    }
+    function twitter(){
+        window.open("https://twitter.com/hm","_blank");
+    }
+    function insta(){
+        window.open("https://www.instagram.com/hm/","_blank");
+    }
+    function pinterest(){
+        window.open("https://www.pinterest.com/hm/","_blank");
+    }
+    function youtube(){
+        // window.location.href="https://www.youtube.com/user/hennesandmauritz";
+        window.open("https://www.youtube.com/user/hennesandmauritz", '_blank');
+    }
+    
 </script>
