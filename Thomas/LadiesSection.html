@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H & M Ladies section</title>
+
+<style>
+#header{
+    width: 100%;
+    height: 200px;
+
+}
+#nav {
+  width: 100%;
+  height: 25%;
+  /* margin-top: 35px; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+
+  padding-top:10px ;
+
+}
+#right {
+  display: flex;
+  /* border: 1px solid black; */
+}
+#right>div{
+    padding: 20px;
+}
+#left {
+  display: flex;
+
+}
+#left>div{
+    padding: 10px 20px;
+}
+#left>div:nth-child(1){
+    padding-top:20px
+}
+#left>div:nth-child(2){
+    padding-top:20px
+}
+
+/* miidle log and etc.. */
+#icon3{
+    height: 40px;
+}
+#icon3>button{
+}
+
+#head {
+    width: 100%;
+}
+#logo {
+  width: 60px;
+  height: 70px;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+#category {
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+#category>div{
+    padding: 15px;
+}
+
+
+#search {
+  width: 100%;
+  margin-left: 50px;
+}
+#search > div:nth-child(1) {
+  display: flex;
+  width: 180px;
+  height: 30px;
+}
+#searchbutton {
+  background-color: #faf9f8;
+  border: transparent;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3EFoundation%20%2F%20Icon%20%2F%2024%20%2F%20Control%20%2F%20Search%3C%2Ftitle%3E%3Cdefs%3E%3Cpath%20d%3D%22M11%2019a8%208%200%201%200%200-16%208%208%200%200%200%200%2016zm0%201a9%209%200%201%201%200-18%209%209%200%200%201%200%2018zm6.707-3l4.243%204.243-.707.707L17%2017.707l.707-.707z%22%20id%3D%22prefix__a%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cuse%20fill%3D%22%23222%22%20xlink%3Ahref%3D%22%23prefix__a%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+#icon4 {
+  width: 10px;
+  background-repeat: no-repeat;
+}
+input {
+  border: transparent;
+  background-color: transparent;
+}
+
+hr {
+  background-color: rgb(9, 9, 10);
+}
+#head > div:nth-child(2) {
+  margin-left: 350px;
+  color: rgb(110, 93, 72);
+}
+
+#bag{
+    background-color: rgb(206, 169, 169);
+    color: black;
+    border: transparent;
+}
+#bodydiv{
+    width: 100%;
+    height: 30%;
+}
+
+#container{
+    
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+#container>div{
+    margin-top: 20px;
+}
+#firstphoto{
+    cursor: pointer;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+
+#maindiv{
+   width: 100%;
+   height: 100%;
+   padding-top: 50px;
+   
+}
+#filterdiv{
+    width: 60%;
+    height: 10% ;
+    padding: 20px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+ 
+}
+
+#itemsdiv{
+    display: grid; 
+    height: 70%;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 30px;
+    justify-content: center;
+   
+}
+
+#itemsdiv>div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 250px;
+    height: 400px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 13px;
+}
+img{
+    width: 100%;
+    height: 70%;
+    border-radius:10px;
+}
+button{
+    background-color: rgb(43, 175, 43);
+    color: white;
+    padding: 10px;   
+    border-radius: 10px;
+    cursor: pointer;
+}
+#filterprice{
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
+#filtername{
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(253, 253, 253);
+    border-radius: 30px;
+}
+#filterbrand{
+    padding: 10px 20px;
+    background-color: rgb(248, 248, 250);
+    color: rgb(0, 0, 0);
+    border-radius: 30px; 
+}
+#byname{
+    padding: 10px 20px;
+    background-color: rgb(248, 250, 246);
+    color: rgb(3, 3, 3);
+    border-radius: 30px;
+}
+#content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#offers{
+    width: 25%;
+    height: 100%;
+    padding-left: 20px;
+
+}
+
+@media only screen and (min-width:500px) and (max-width:900px){
+    #itemsdiv{
+    grid-template-columns: repeat(2,auto);   
+}
+#content{
+ display: grid;
+   
+}
+}
+
+@media only screen and (min-width:0px) and (max-width:499px){
+    #itemsdiv{
+    grid-template-columns: repeat(1,auto);   
+}
+#content{
+ display: grid;
+    
+}
+    
+}
+</style>
+
+</head>
+<body >
+    <div id="header">
+
+          
+        <div id="nav"> 
+            <div id="right">
+                <div>Customer Service</div>
+                <div>Newsletter</div>
+                <div>Find a store</div>
+                <div>ooo</div>
+            </div> 
+            <div id="left">
+                 <div id="icon1">Sign In</div> 
+                 <div id="icon2">Favourite</div>
+                <div id="icon3"> 
+            
+                    <button id="bag" onclick="GoTobag()">Shopping Bag<h5 id="bagcount"></h5></button>
+               
+            </div>
+            </div>
+        
+        </div>
+
+
+        <div id="head">
+        
+            <div id="logo"> 
+                <img src="data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22370%22%20height%3D%22244%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3E1.%20Foundation%2FLogotypes%2FH%26amp%3BM%2FRed%3C%2Ftitle%3E%3Cdefs%3E%3Cpath%20d%3D%22M259.895%207.413c13.424-6.618%2020.087-5.737%2020.232.946.19%208.7-1.098%2020.23-2.016%2028.604-4.983%2045.423-13.32%2082.543-13.954%20129.19%2021.94-56.802%2040.345-96.278%2064.03-144.909%207.53-15.47%2012.325-12.593%2018.503-15.343%2024.082-10.715%2024.984-4.133%2021.837%208.95-11.686%2048.552-41.54%20201.376-46.114%20224.907-1.328%206.807-8.715%203.923-10.644%201.26-8.57-11.85-18.225-12.036-17.14-19.919%205.37-39.233%2024.71-137.666%2029.75-160.863-25.719%2052.696-52.37%20118.566-66.053%20155.914-2.907%207.931-8.188%207.35-11.48%201.546-4.63-8.15-13.61-12.312-15.093-21.943-4.702-30.628%205.37-89.003%206.773-125.936-13.994%2040.342-37.49%20118.67-47.782%20154.057-4.256%2014.643-18.382%2012.253-14.627-2.018%2015.642-59.389%2049.326-164.425%2063.915-202.198%203.427-8.874%2012.406-8.569%2019.863-12.245zM174.6.115c4.26%201.025%203.913%206.05%201.31%2012.912-7.682%2020.247-18.335%2046.847-30.516%2078.212%207.658-.874%2011.811-1.17%2011.811-1.17%2010.994-1.358%2013.041%204.139%209.946%209.99-2.466%204.664-5.436%201.554-15.724%2016.89-5.796%208.642-15.259%2010.924-20.515%2012.076-12.662%2033.523-26.23%2070.916-39.415%20110.77-1.919%205.804-7.524%204.532-9.209%202.174-6.192-8.647-10.758-8.933-15.558-15.927-.577-1.132-1.706-2.672-1.027-5.448%203.53-14.425%2012.901-44.067%2027.156-83.091-17.958%203.892-37.387%208.076-45.408%209.94-9.626%2025.445-19.014%2050.967-27.908%2076.18-5.518%2015.64-19.88%2012.617-14.84-2.165%208.028-23.548%2016.89-48.004%2025.776-71.72-9.948-1.063-13.313-8.088-18.873-13.958-2.147-2.267-6.828-1.948-9.12-5.127-4.123-5.711-3.712-8.248%205.81-10.996a955.318%20955.318%200%200%201%2037.464-9.998c16.09-41.524%2030.63-77.144%2038.38-96.151C90.114-1.138%20105.514.226%2099.664%2014.674c-11.889%2029.363-24.079%2059.867-36.11%2090.799a880.98%20880.98%200%200%201%2044.748-8.87%202312.644%202312.644%200%200%201%2034.62-83.968c.845-1.937%203.31-4.678%205.878-5.118%208.092-1.385%2021.251-8.498%2025.8-7.402zm-27.552%20190.077c1.265-.773%202.524-1.715%203.767-2.75a756.514%20756.514%200%200%201-2.82-8.468%20139.528%20139.528%200%200%200-2.752%203.638c-5.386%207.396-2.197%2010.028%201.805%207.58zm7.167-35.065c6.67-7.53-6.516-10.681-3.48.836.17.65.382%201.413.62%202.254a98.19%2098.19%200%200%200%202.86-3.09zm6.941%2022.695c6.602-5.721%2012.908-.046%206.38%209.628-1.404%202.08-2.99%204.318-4.729%206.522a193.17%20193.17%200%200%200%202.146%205.877c3.375%208.654-5.488%2010.824-8.345%203.656-.25-.626-.51-1.297-.778-1.995-5.387%204.772-11.618%207.777-18.275%205.707-10.954-3.407-13.74-18.83-3.514-30.711%204.103-4.767%207.191-8.074%209.771-10.716a251.947%20251.947%200%200%201-1.819-6.17c-1.328-4.81-2.527-10.416%202.287-16.13%209.027-10.712%2029.971-1.203%2019.377%2015.289-2.552%203.972-5.535%207.724-8.647%2011.527a979.555%20979.555%200%200%200%203.26%2010.18%2078.304%2078.304%200%200%201%202.886-2.664z%22%20id%3D%22prefix__a%22%2F%3E%3C%2Fdefs%3E%3Cuse%20fill%3D%22%23E50010%22%20xlink%3Ahref%3D%22%23prefix__a%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E" alt="logo"></div>
+            <div>
+                
+            <div id="category">
+                <div><span>Ladies</span></div>
+                <div><span>Men</span></div>
+                <div><span>Baby</span></div>
+                <div><span>kids</span></div>
+                <div><span>divided</span></div>
+                <div><span>Sale</span></div>
+                <div><span>Sustainability</span></div>
+                      
+            <div id="search">
+            <div>  <button id="searchbutton">
+                    <div id="icon4"> </div>  
+                </button>
+                <input type="search" placeholder="Search products"/>
+            </div>
+              <hr> 
+            </div>
+         </div>
+
+        </div>
+        </div>
+
+    </div>
+
+    <div id="bodydiv">
+
+        <div id="container">
+            <p>HM.com/Ladies Items</p>
+            <div id="firstphoto">
+                <img src="https://i.insider.com/5a42d230430d03f1138b45fe?width=700" alt="image">
+            </div>
+            <div id="middiv">
+                <p>Online deal</p>
+                <h2>Sweet finds from Rs.1999</h2>
+                <p class="name">Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p>
+            </div>
+         </div>
+
+    </div>
+
+    <div id="maindiv">
+    <div id="filterdiv">
+      <select id="filterprice" onchange="filterprice()">
+          <option value="--">Filter by Price</option>
+          <option value="low">Low - High</option>
+          <option value="high">High - Low</option>
+      </select>
+      <select id="byname" onchange="Byname()"> 
+          <option value="">Filter By Name</option>
+          <option value="asc">A - Z</option>
+          <option value="dsc">Z - A</option>
+         
+      </select>
+
+      <select id="filtername" onchange="filtername()">
+        <option value="--">Filter by product Name</option>
+        <option value="top">Tops</option>
+        <option value="sweater">Sweaters</option>
+        <option value="jacket">Jackets</option>
+        <option value="pajama">Pajamas</option>
+        <option value="shoes">Shoes</option>
+        <option value="pants">Pants</option>
+    </select>
+    <select id="filterbrand" onchange="filterbrand()">
+        <option value="--">Filter by Brand</option>
+        <option value="adidas">Adidas</option>
+        <option value="tommy">Tommy</option>
+        <option value="zara">Zara</option>
+        <option value="levis">Levis</option>
+    </select>
+    </div>
+
+    <div id="content">
+
+        <div id="offers">
+    
+            <div>
+                <h2>New Arrivals</h2>
+                <p>View All</p>
+                <p>Clothes</p>
+                <p>Shoes & Accessories</p>
+                <p>UNderwear & Nightwear</p><br>
+                <h2>Holiday Shop & Trending Now</h2>
+                <p>The Holiday Shop</p>
+                <p>Holiday Sweateers</p>
+                <p>Holiday Lingerie</p>
+                <p>Holiday Nightwear</p>
+                <p>Winter must-haves</p>
+                <p>New Year's Eve</p>
+                <p>A Circular Design Story</p>
+                <p>Varsity wear</p>
+                <p>Y2K fashion</p>
+                <p>Trend edit</p><br>
+                <h2>Offers</h2>
+                <p>UP to 50% off</p>
+                <p>Student Discount: Get 15% off</p>
+                <br>
+                <h2>Shop bt Product</h2>
+                <p>VIew All</p>
+                <p>Tops</p>
+                <p>Basics</p>
+                <p>Shirts & Blouses</p>
+                <p>Cardigans & Sweaters</p>
+                <p>Blazers</p>
+                <p>Jackets  Coats</p>
+                <p>Hoodies & Sweatshirts</p>
+                <p>Pants</p>
+                <p>Jeans</p>
+                <p>Shorts</p>
+                <p>Skorts</p>
+                <p>Dresses</p>
+                <p>Jumpsuits & Rompers</p>
+                <p>Shoes</p>
+                <p>Accessories</p>
+                <p>Swimwear & Beachwear</p>
+                <p>Lingerie</p>
+                <p>loungewear</p>
+                <p>Sleepwear</p>
+                <p>Socks& Tights</p>
+                <p>Activewear</p>
+                <p>Plus Sizes</p>
+                <p>Beauty</p>
+                <p>Care Products</p>
+                <p>Petite Sizing</p>
+                <p>Premium Selection</p>
+                <br>
+                <h2>Gifting</h2>
+                <p>Gift Cards</p>
+                <p>Gift Guide</p>
+                <br>
+                <h2>Sustainability</h2>
+                <p>Our products</p>
+                <p>H&M Take Care</p>
+                <p>Learn More</p>
+                <p>Higg Index</p>
+                <br>
+                <h2>Magazine</h2>
+                <p>Magazine</p>
+                <br>
+                <h2>Shop by Occasion</h2>
+                <p>Weeding</p>
+                <p>Party Wear</p>
+                <p>Casual Wear</p>
+                <p>Office Wear</p>
+                <p>Loungewear</p>
+            </div>
+        </div>
+    
+        <div id="itemsdiv">
+    
+        </div>
+    
+     </div>
+
+</div>
+
+    
+</body>
+
+<script>
+
+var LadiesItems =[
+
+{
+name : "shoes",
+brand:"adidas",
+image : "https://i.pinimg.com/originals/3b/9c/37/3b9c37df4d23edb68bcbc9fe5638d8cb.jpg",
+price : "1799"
+},
+{
+
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/a8/2b/a82b600bc9933876752c6011ecc1e321fad891aa.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "1799"
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/fe/db/fedb403705bd980831fb67a13bee3b9f8fa4a7eb.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "1799"
+},
+{
+    name : "sweater",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/7d/7b/7d7b176895ba09fb5ab25b942c8bed91283879ad.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "2499"
+},
+{
+name : "shoes",
+brand:"adidas",
+image : "https://i.pinimg.com/736x/94/2b/15/942b15a03f41536f1ac1586b05f04dfc--gray-addidas-shoes-gray-adidas.jpg",
+price : "4799"
+},
+{
+
+    name : "sweater",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/9e/54/9e54cb44a2622f0c35a963f6bf76abe010d97f8e.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "2499"
+},
+{
+    name : "jacket",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/ad/ff/adffecc043fd8f4e4c6e0de5c542b64458853e4c.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "7999"
+},
+{
+    name : "top",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/17/c1/17c1b9717bce35ad2150135c9af8f6f0788930ba.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "1999",
+
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/16/0b/160bcdbd9288c7958eda6a3a598a6b9919434a7c.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "5999",
+ 
+},
+{
+    name : "jacket",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/2b/0c/2b0c71ecd5f5096f3da711ca47b0a9dbe7d9f534.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999"
+},
+
+{
+name : "shoes",
+brand:"adidas",
+image : "https://di2ponv0v5otw.cloudfront.net/posts/2018/03/30/5abece8e6f8f5989e58b9632/m_5abece909cc7efbc66bc38e3.jpeg",
+price : "999"
+},
+{
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/e5/1b/e51bbbb5de842348a1acabe468ac2ea4bfe08b55.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "2999"
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/12/9e/129eea9ab76e5e424de92c7f330a68a09b7e9499.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "5999",
+
+},
+{
+name : "shoes",
+brand:"adidas",
+image : "https://i.pinimg.com/originals/00/57/61/0057619c60c2400970844360a5d6fe86.jpg",
+price : "2345"
+},
+{
+    name : "sweater",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/91/91/919198647e330dd3f4a02fc119295a0c72e4f45e.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "pajama",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/16/31/1631fab5118112eb206dad44662b8c33c0a64698.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3999",
+
+},
+{
+    name : "sweater",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/05/fe/05feeb08774242941200292feed098dce5c77f98.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999"
+},
+{
+    name : "jacket",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/8d/14/8d14257a18690645d79b329f0acfc3ece08e2dd5.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "pajama",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/fa/aa/faaa65c507592dcdb6a5767f572e1283c668895b.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "boots",
+    brand:"adidas",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/ae/5b/ae5ba857c652dd7c8fbcfae62b9a5c233eced756.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "jacket",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/5c/55/5c55c756a07372a1701172a1225e4d4c1a60b63c.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "6999"
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/5e/80/5e802b4cd245771b41cae7c168ffdea313876c5a.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "sweater",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/e8/56/e856209d1f4133ef9649d580e6cede8075646aa5.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "499",
+
+},
+{
+    name : "pajama",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/de/e5/dee513f889afc526e6bb8fa116b750328d62dd8f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3999",
+
+},
+{
+    name : "jacket",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/07/bf/07bf659688feac821770a5c8c79e9725eccb3a2e.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3999",
+
+},
+{
+    name : "pajama",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/16/48/1648c3117d82aabf15defc2edf90b910f79334c3.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "1799",
+
+},
+{
+    name : "pajama",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/3b/cc/3bcc8d743122bd33f83e3ff3351408a8d0db0097.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "jacket",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/40/b3/40b30a8bafcf2a5c0ef72f30f3c477bc23355fe3.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/c0/7e/c07ed7b4c4366cb8be1a5ae6e919f75e0086c47d.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "2499"
+},
+{
+    name : "pajama",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/24/dd/24ddbfe408d9aa0b14c7e2990589667fa3cce2e6.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/06/6d/066d7e6e4bac39ea6ebcb68827042a8b7212e0be.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "999"
+},
+{
+    name : "pants",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/0b/40/0b402d529b6f56e378eee2d9c89dc703b27d9ff4.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "2999",
+},
+{
+    name : "pajama",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/3e/2e/3e2e9b1cd7ef0b5a90d9dcd40dd7cd33c733e5c7.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "jacket",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/d4/2d/d42d0a2c3687777f381eda59677ba056fe48a122.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "sweater",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/83/2b/832bb47bb34907c35ac09202a2d1c940950b91f5.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "1799",
+
+},
+]
+
+      
+var WomensData= [];
+
+LadiesItems.map(function(item){
+ 
+    var womensobj ={
+        name:item.name,
+        brand:item.brand,
+        img:item.image,
+        MRP:item.price,
+    }
+    WomensData.push(womensobj)
+})
+
+  DisplayItems()
+
+ localStorage.setItem("WomensDB",JSON.stringify(WomensData))
+
+ function DisplayItems(){
+     WomensData.map(function(items){
+
+     
+      var div=document.createElement("div")
+         div.style.backgroundColor="rgb(221, 199, 221)"
+
+      var img=document.createElement("img")
+        img.setAttribute("src",items.img)
+      var h3 = document.createElement("h3")
+        h3.textContent=items.name
+      var h4 = document.createElement("h4")
+         h4.textContent=items.brand+"  :  $"+items.MRP
+      var butn = document.createElement("button")
+        butn.textContent="Add to Shopping Bag"
+        butn.addEventListener("click",function(){
+               BagAdd(items,butn)
+        })
+
+        div.append(img,h3,h4,butn)
+        document.querySelector("#itemsdiv").append(div)
+     })
+      
+ }
+ var Bag =JSON.parse(localStorage.getItem("WBagDB")) || [];
+ 
+  function BagAdd(items,butn){
+      butn.style.backgroundColor="red"
+      butn.textContent="Added"
+    document.querySelector("#bagcount").textContent="("+(Bag.length+1)+")"
+    Bag.push(items);
+    localStorage.setItem("BagDB",JSON.stringify(Bag))
+  }
+function GoTobag(){
+    window.location.href="ShoppingBag.html"
+    console.log("Bag")
+}
+
+
+function filterprice(){
+     var change = document.querySelector("#filterprice").value
+       document.querySelector("#itemsdiv").textContent=""
+     if(change == "low"){
+        var sorted = WomensData.sort(function(a,b){
+             if(Number(a.MRP) > Number(b.MRP)) return 1
+             if(Number(a.MRP) < Number(b.MRP)) return -1
+         })
+     }
+     if(change == "high"){
+        var sorted = WomensData.sort(function(a,b){
+             if(Number(a.MRP) < Number(b.MRP)) return 1
+             if(Number(a.MRP) > Number(b.MRP)) return -1
+         })
+     }
+      DisplayItems(sorted)
+    }
+  
+   function Byname(){
+     var change = document.querySelector("#byname").value
+       document.querySelector("#itemsdiv").textContent=""
+     if(change == "asc"){
+        var sorted = WomensData.sort(function(a,b){
+             if(a.name > b.name) return 1
+             if(a.name < b.name) return -1
+         })
+     }
+     if(change == "dsc"){
+        var sorted = WomensData.sort(function(a,b){
+             if(a.name < b.name) return 1
+             if(a.name > b.name) return -1
+         })
+     }
+      DisplayItems(sorted)
+    }
+
+
+    function filtername(){
+     var change = document.querySelector("#filtername").value
+       document.querySelector("#itemsdiv").textContent=""
+     if(change == "top"){
+        var sorted = WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+
+     if(change == "sweater"){
+        var sorted = WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+     if(change == "jacket"){
+        var sorted = WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+     if(change == "pajama"){
+        var sorted =WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+     if(change == "shoes"){
+        var sorted = WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+     if(change == "pants"){
+        var sorted = WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+  
+      DisplayItems(sorted)
+    }
+
+
+function filterbrand(){
+     var change = document.querySelector("#filterbrand").value
+       document.querySelector("#itemsdiv").textContent=""
+
+     if(change == "adidas"){
+        var sorted = WomensData.sort(function(a){
+             if(a.brand == change) return -1
+             if(a.brand != change) return 1
+         })
+     }
+
+     if(change == "tommy"){
+        var sorted =  WomensData.sort(function(a){
+            if(a.brand == change) return -1
+             if(a.brand != change) return 1
+         })
+     }
+     if(change == "zara"){
+        var sorted =  WomensData.sort(function(a){
+            if(a.brand == change) return -1
+             if(a.brand != change) return 1
+         })
+     }
+     if(change == "levis"){
+        var sorted = WomensData.sort(function(a){
+            if(a.brand == change) return -1
+             if(a.brand != change) return 1
+         })
+     }
+      DisplayItems(sorted)
+    }
+
+
+</script>
+
+
+

@@ -8,21 +8,33 @@
 
 <style>
 #header{
+    display:flex;
     width: 100%;
     height: 300px;
     border: 2px solid green;
+    justify-content: flex-end;
+}
+#rytend{
+    margin: 40px;
+    width: 10%;
+    height: 100%;
+}
+#bag{
+    background-color: rgb(26, 22, 223);
+    padding: 15px;
 }
 #maindiv{
    width: 100%;
    height: 100%;
    border: 2px solid red;
    padding-top: 50px;
-   display: flex;
+   
 }
 #filterdiv{
-    width: 20%;
-    height: 100%;
-    border: 1px solid black;
+    width: 100%;
+    height: 10% ;
+    /* border: 3px solid black; */
+    padding: 20px;
 }
 
 #itemsdiv{
@@ -49,32 +61,31 @@ img{
 button{
     background-color: rgb(43, 175, 43);
     color: white;
-    padding: 5px;
-    border: transparent;
+    padding: 10px 20px;   
     border-radius: 20px;
     cursor: pointer;
 }
 #filterprice{
     padding: 10px 20px;
     background-color: rgb(0, 0, 0);
-    color: rgb(221, 211, 211);
+    color: rgb(255, 255, 255);
     border-radius: 30px;
 }
 #filtername{
     padding: 10px 20px;
-    background-color: rgb(34, 206, 236);
-    color: rgb(95, 81, 81);
+    background-color: rgb(0, 0, 0);
+    color: rgb(253, 253, 253);
     border-radius: 30px;
 }
 #filterbrand{
     padding: 10px 20px;
-    background-color: rgb(26, 72, 223);
-    color: rgb(243, 236, 236);
+    background-color: rgb(248, 248, 250);
+    color: rgb(0, 0, 0);
     border-radius: 30px; 
 }
 #byname{
     padding: 10px 20px;
-    background-color: rgb(78, 179, 32);
+    background-color: rgb(248, 250, 246);
     color: rgb(3, 3, 3);
     border-radius: 30px;
 }
@@ -88,7 +99,12 @@ select{
 
 </head>
 <body>
-    <div id="header"></div>
+    <div id="header">
+     <div id="rytend">
+         <button id="bag" onclick="GoTobag()">Shopping Bag<h3 id="bagcount"></h3></button>
+     </div>
+    </div>
+
     <div id="maindiv">
     <div id="filterdiv">
       <select id="filterprice" onchange="filterprice()">
@@ -185,14 +201,29 @@ mensitems.map(function(item){
       var h4 = document.createElement("h4")
          h4.textContent=items.brand+"  :  $"+items.MRP
       var butn = document.createElement("button")
-        butn.textContent="Add to cart"
+        butn.textContent="Add to Shopping Bag"
+        butn.addEventListener("click",function(){
+               BagAdd(items,butn)
+        })
 
         div.append(img,h3,h4,butn)
         document.querySelector("#itemsdiv").append(div)
      })
       
  }
-
+ var Bag =JSON.parse(localStorage.getItem("BagDB")) || [];
+ 
+  function BagAdd(items,butn){
+      butn.style.backgroundColor="red"
+      butn.textContent="Added"
+    document.querySelector("#bagcount").textContent="("+(Bag.length+1)+")"
+    Bag.push(items);
+    localStorage.setItem("BagDB",JSON.stringify(Bag))
+  }
+function GoTobag(){
+    window.location.href="bag.html"
+    console.log("Bag")
+}
 
 
 

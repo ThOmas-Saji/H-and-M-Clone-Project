@@ -59,6 +59,7 @@
                     var password = document.querySelector("#pas").value;
                   for(var i =0; i<regUsers.length; i++){
                       if((regUsers[i].eml==email||regUsers[i].ph==email)&&regUsers[i].pass==password){
+                          localStorage.setItem("currentuser", JSON.stringify(regUsers[i]));
                          var bag="reguser";
                       }
                   }
