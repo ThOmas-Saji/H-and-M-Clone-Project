@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H & M Mens section</title>
+    <title>H & M Ladies section</title>
 
 <style>
 #header{
@@ -160,7 +160,7 @@ h2{
 
 #itemsdiv>div{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    width: 270px;
+    width: 250px;
     height: 400px;
     padding: 10px;
     text-align: center;
@@ -213,6 +213,27 @@ button{
     height: 100%;
     padding-left: 20px;
 
+}
+
+@media only screen and (min-width:500px) and (max-width:900px){
+    #itemsdiv{
+    grid-template-columns: repeat(2,auto);   
+}
+#content{
+ display: grid;
+   
+}
+}
+
+@media only screen and (min-width:0px) and (max-width:499px){
+    #itemsdiv{
+    grid-template-columns: repeat(1,auto);   
+}
+#content{
+ display: grid;
+    
+}
+    
 }
 </style>
 
@@ -274,9 +295,9 @@ button{
     <div id="bodydiv">
 
         <div id="container">
-            <p>HM.com/Mens Items</p>
+            <p>HM.com/Ladies Items</p>
             <div id="firstphoto">
-                <img src="https://image.shutterstock.com/z/stock-photo-yes-winners-four-cheerful-young-men-are-standing-and-gesturing-for-the-victory-on-pure-background-654931051.jpg" alt="image">
+                <img src="https://i.insider.com/5a42d230430d03f1138b45fe?width=700" alt="image">
             </div>
             <div id="middiv">
                 <p>Online deal</p>
@@ -303,157 +324,371 @@ button{
 
       <select id="filtername" onchange="filtername()">
         <option value="--">Filter by product Name</option>
-        <option value="t-shirt">T-shirts</option>
-        <option value="jeans">Jeans</option>
-        <option value="backpack">Bags</option>
-        <option value="sneakers">Shoes</option>
-        <option value="watch">Watch</option>
+        <option value="top">Tops</option>
+        <option value="sweater">Sweaters</option>
+        <option value="jacket">Jackets</option>
+        <option value="pajama">Pajamas</option>
+        <option value="shoes">Shoes</option>
+        <option value="pants">Pants</option>
     </select>
     <select id="filterbrand" onchange="filterbrand()">
         <option value="--">Filter by Brand</option>
         <option value="adidas">Adidas</option>
-        <option value="puma">Puma</option>
-        <option value="nike">Nike</option>
-        <option value="levis">Levis</option>
-        <option value="fasttrack">FastTrack</option>
         <option value="tommy">Tommy</option>
-        <option value="blueday">Blue Day</option>
-        <option value="rolex">Rolex</option>
+        <option value="zara">Zara</option>
+        <option value="levis">Levis</option>
     </select>
     </div>
-<div id="content">
 
-    <div id="offers">
+    <div id="content">
 
-        <div>
-            <h2>New Arrivals</h2>
-            <p>View All</p>
-            <p>Clothes</p>
-            <p>Shoes & Accessories</p>
-            <p>UNderwear & Nightwear</p><br>
-            <h2>Holiday Shop & Trending Now</h2>
-            <p>The Holiday Shop</p>
-            <p>Holiday Sweateers</p>
-            <p>Holiday Lingerie</p>
-            <p>Holiday Nightwear</p>
-            <p>Winter must-haves</p>
-            <p>New Year's Eve</p>
-            <p>A Circular Design Story</p>
-            <p>Varsity wear</p>
-            <p>Y2K fashion</p>
-            <p>Trend edit</p><br>
-            <h2>Offers</h2>
-            <p>UP to 50% off</p>
-            <p>Student Discount: Get 15% off</p>
-            <br>
-            <h2>Shop bt Product</h2>
-            <p>VIew All</p>
-            <p>Tops</p>
-            <p>Basics</p>
-            <p>Shirts & Blouses</p>
-            <p>Cardigans & Sweaters</p>
-            <p>Blazers</p>
-            <p>Jackets  Coats</p>
-            <p>Hoodies & Sweatshirts</p>
-            <p>Pants</p>
-            <p>Jeans</p>
-            <p>Shorts</p>
-            <p>Skorts</p>
-            <p>Dresses</p>
-            <p>Jumpsuits & Rompers</p>
-            <p>Shoes</p>
-            <p>Accessories</p>
-            <p>Swimwear & Beachwear</p>
-            <p>Lingerie</p>
-            <p>loungewear</p>
-            <p>Sleepwear</p>
-            <p>Socks& Tights</p>
-            <p>Activewear</p>
-            <p>Plus Sizes</p>
-            <p>Beauty</p>
-            <p>Care Products</p>
-            <p>Petite Sizing</p>
-            <p>Premium Selection</p>
-            <br>
-            <h2>Gifting</h2>
-            <p>Gift Cards</p>
-            <p>Gift Guide</p>
-            <br>
-            <h2>Sustainability</h2>
-            <p>Our products</p>
-            <p>H&M Take Care</p>
-            <p>Learn More</p>
-            <p>Higg Index</p>
-            <br>
-            <h2>Magazine</h2>
-            <p>Magazine</p>
-            <br>
-            <h2>Shop by Occasion</h2>
-            <p>Weeding</p>
-            <p>Party Wear</p>
-            <p>Casual Wear</p>
-            <p>Office Wear</p>
-            <p>Loungewear</p>
+        <div id="offers">
+    
+            <div>
+                <h2>New Arrivals</h2>
+                <p>View All</p>
+                <p>Clothes</p>
+                <p>Shoes & Accessories</p>
+                <p>UNderwear & Nightwear</p><br>
+                <h2>Holiday Shop & Trending Now</h2>
+                <p>The Holiday Shop</p>
+                <p>Holiday Sweateers</p>
+                <p>Holiday Lingerie</p>
+                <p>Holiday Nightwear</p>
+                <p>Winter must-haves</p>
+                <p>New Year's Eve</p>
+                <p>A Circular Design Story</p>
+                <p>Varsity wear</p>
+                <p>Y2K fashion</p>
+                <p>Trend edit</p><br>
+                <h2>Offers</h2>
+                <p>UP to 50% off</p>
+                <p>Student Discount: Get 15% off</p>
+                <br>
+                <h2>Shop bt Product</h2>
+                <p>VIew All</p>
+                <p>Tops</p>
+                <p>Basics</p>
+                <p>Shirts & Blouses</p>
+                <p>Cardigans & Sweaters</p>
+                <p>Blazers</p>
+                <p>Jackets  Coats</p>
+                <p>Hoodies & Sweatshirts</p>
+                <p>Pants</p>
+                <p>Jeans</p>
+                <p>Shorts</p>
+                <p>Skorts</p>
+                <p>Dresses</p>
+                <p>Jumpsuits & Rompers</p>
+                <p>Shoes</p>
+                <p>Accessories</p>
+                <p>Swimwear & Beachwear</p>
+                <p>Lingerie</p>
+                <p>loungewear</p>
+                <p>Sleepwear</p>
+                <p>Socks& Tights</p>
+                <p>Activewear</p>
+                <p>Plus Sizes</p>
+                <p>Beauty</p>
+                <p>Care Products</p>
+                <p>Petite Sizing</p>
+                <p>Premium Selection</p>
+                <br>
+                <h2>Gifting</h2>
+                <p>Gift Cards</p>
+                <p>Gift Guide</p>
+                <br>
+                <h2>Sustainability</h2>
+                <p>Our products</p>
+                <p>H&M Take Care</p>
+                <p>Learn More</p>
+                <p>Higg Index</p>
+                <br>
+                <h2>Magazine</h2>
+                <p>Magazine</p>
+                <br>
+                <h2>Shop by Occasion</h2>
+                <p>Weeding</p>
+                <p>Party Wear</p>
+                <p>Casual Wear</p>
+                <p>Office Wear</p>
+                <p>Loungewear</p>
+            </div>
         </div>
-    </div>
+    
+        <div id="itemsdiv">
+    
+        </div>
+    
+     </div>
 
-    <div id="itemsdiv">
-
-    </div>
-
- </div>
 </div>
 
     
 </body>
 
 <script>
-var mensitems = [
-	{name:"sneakers",brand:"adidas",MRP:2999,img:"https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/12708792/2021/6/8/59c44174-5d0c-413f-86e8-776d6e9e26291623125256961-ADIDAS-Men-Sports-Shoes-5691623125256370-1.jpg"},
-	{name:"sneakers",brand:"adidas",MRP:3999,img:"https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/12708736/2021/8/9/784ad5e5-59d9-44bb-99f1-7893205604cb1628504449282-ADIDAS-Men-Navy-blue--Grey-Woven-Design-Statix-Running-Shoes-1.jpg"},
-	{name:"t-shirt",brand:"levis",MRP:1999,img:"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1424142/2016/7/18/11468826163576-Levis-Grey-Printed-T-shirt-7771468826163395-1.jpg"},
-	{name:"t-shirt",brand:"nike",MRP:2599,img:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de4484be-3934-4a16-bf70-dc82c8b94738/pro-dri-fit-adv-short-sleeve-top-TBPNdk.png"},
-	{name:"backpack",brand:"fasttrack",MRP:2899,img:"https://5.imimg.com/data5/BW/GR/MY-28005146/fastrack-laptop-backpack-for-men-ac022nbk02-500x500.png"},
-	{name:"backpack",brand:"puma",MRP:3999,img:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/076581/01/fv/fnd/IND/fmt/png"},
-	{name:"jeans",brand:"levis",MRP:3433,img:"https://i.ebayimg.com/images/g/lo4AAOSwMs5dliDH/s-l400.jpg"},
-	{name:"jeans",brand:"levis",MRP:4999,img:"https://i.ebayimg.com/images/g/3gEAAOSwq4NebngU/s-l640.jpg"},
-	{name:"watch",brand:"tommy",MRP:2988,img:"https://cf.shopee.com.my/file/4a4fdcef4fc5ce6e7cead4e3c564b177"},
-	{name:"watch",brand:"blueday",MRP:3990,img:"https://5.imimg.com/data5/EM/CT/PY/SELLER-15604743/day-and-date-watch-for-men-boys-iik-708m-dnd-500x500.jpg"},
-	{name:"bag",brand:"adidas",MRP:2999,img:"https://rukminim1.flixcart.com/image/714/857/k0sgl8w0/backpack/n/3/g/men-parkhood-bos-backpack-9203431-backpack-adidas-original-imafkhje2krny76h.jpeg?q=50"},
-	{name:"sneakers",brand:"nike",MRP:3999,img:"https://i.pinimg.com/originals/91/50/85/91508533ef252b1061d3372a4796297f.png"},
-	{name:"t-shirt",brand:"nike",MRP:1999,img:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8f30288b-0793-4657-9bff-9809cd854271/sportswear-mens-t-shirt-zTB7SW.png"},
-	{name:"t-shirt",brand:"nike",MRP:2599,img:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/224b3e8a-b3c2-4940-b124-cbaf5386de98/dri-fit-run-wild-run-short-sleeve-graphic-running-top-8qnp7v.png"},
-	{name:"backpack",brand:"levis",MRP:2899,img:"https://ih1.redbubble.net/image.1489583732.6547/ur,backpack_front,square,600x600.jpg"},
-	{name:"backpack",brand:"puma",MRP:3999,img:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/076755/17/fnd/IND/fmt/png/Man-City-Performance-Backpack"},
-	{name:"jeans",brand:"levis",MRP:3433,img:"https://m.media-amazon.com/images/I/81TpF+JRlaL._UY550_.jpg"},
-	{name:"jeans",brand:"levis",MRP:4999,img:"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fbe%2F6a%2Fbe6a2fd5b0d7248b21274508bcfad645db2ad2ef.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_jeans%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
-	{name:"watch",brand:"fasttrack",MRP:2988,img:"https://staticimg.titan.co.in/Fastrack/Catalog/68006PP02_1.jpg?pView=pdp"},
-	{name:"watch",brand:"rolex",MRP:3990,img:"https://content.rolex.com/dam/2021/upright-bba-with-shadow/m126234-0050.png?impolicy=v6-upright&imwidth=270"},
-]     
-   
-var mensdata= [];
 
-mensitems.map(function(item){
+var LadiesItems =[
+
+{
+name : "shoes",
+brand:"adidas",
+image : "https://i.pinimg.com/originals/3b/9c/37/3b9c37df4d23edb68bcbc9fe5638d8cb.jpg",
+price : "1799"
+},
+{
+
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/a8/2b/a82b600bc9933876752c6011ecc1e321fad891aa.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "1799"
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/fe/db/fedb403705bd980831fb67a13bee3b9f8fa4a7eb.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "1799"
+},
+{
+    name : "sweater",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/7d/7b/7d7b176895ba09fb5ab25b942c8bed91283879ad.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "2499"
+},
+{
+name : "shoes",
+brand:"adidas",
+image : "https://i.pinimg.com/736x/94/2b/15/942b15a03f41536f1ac1586b05f04dfc--gray-addidas-shoes-gray-adidas.jpg",
+price : "4799"
+},
+{
+
+    name : "sweater",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/9e/54/9e54cb44a2622f0c35a963f6bf76abe010d97f8e.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "2499"
+},
+{
+    name : "jacket",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/ad/ff/adffecc043fd8f4e4c6e0de5c542b64458853e4c.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]",
+    price : "7999"
+},
+{
+    name : "top",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/17/c1/17c1b9717bce35ad2150135c9af8f6f0788930ba.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "1999",
+
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/16/0b/160bcdbd9288c7958eda6a3a598a6b9919434a7c.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "5999",
  
-    var mensobj ={
+},
+{
+    name : "jacket",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/2b/0c/2b0c71ecd5f5096f3da711ca47b0a9dbe7d9f534.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999"
+},
+
+{
+name : "shoes",
+brand:"adidas",
+image : "https://di2ponv0v5otw.cloudfront.net/posts/2018/03/30/5abece8e6f8f5989e58b9632/m_5abece909cc7efbc66bc38e3.jpeg",
+price : "999"
+},
+{
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/e5/1b/e51bbbb5de842348a1acabe468ac2ea4bfe08b55.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "2999"
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/12/9e/129eea9ab76e5e424de92c7f330a68a09b7e9499.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "5999",
+
+},
+{
+name : "shoes",
+brand:"adidas",
+image : "https://i.pinimg.com/originals/00/57/61/0057619c60c2400970844360a5d6fe86.jpg",
+price : "2345"
+},
+{
+    name : "sweater",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/91/91/919198647e330dd3f4a02fc119295a0c72e4f45e.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "pajama",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/16/31/1631fab5118112eb206dad44662b8c33c0a64698.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3999",
+
+},
+{
+    name : "sweater",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/05/fe/05feeb08774242941200292feed098dce5c77f98.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999"
+},
+{
+    name : "jacket",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/8d/14/8d14257a18690645d79b329f0acfc3ece08e2dd5.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "pajama",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/fa/aa/faaa65c507592dcdb6a5767f572e1283c668895b.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "boots",
+    brand:"adidas",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/ae/5b/ae5ba857c652dd7c8fbcfae62b9a5c233eced756.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "jacket",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/5c/55/5c55c756a07372a1701172a1225e4d4c1a60b63c.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "6999"
+},
+{
+    name : "top",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/5e/80/5e802b4cd245771b41cae7c168ffdea313876c5a.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "sweater",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/e8/56/e856209d1f4133ef9649d580e6cede8075646aa5.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "499",
+
+},
+{
+    name : "pajama",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/de/e5/dee513f889afc526e6bb8fa116b750328d62dd8f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3999",
+
+},
+{
+    name : "jacket",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/07/bf/07bf659688feac821770a5c8c79e9725eccb3a2e.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3999",
+
+},
+{
+    name : "pajama",
+    brand:"zara",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/16/48/1648c3117d82aabf15defc2edf90b910f79334c3.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "1799",
+
+},
+{
+    name : "pajama",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/3b/cc/3bcc8d743122bd33f83e3ff3351408a8d0db0097.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "jacket",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/40/b3/40b30a8bafcf2a5c0ef72f30f3c477bc23355fe3.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/c0/7e/c07ed7b4c4366cb8be1a5ae6e919f75e0086c47d.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "2499"
+},
+{
+    name : "pajama",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/24/dd/24ddbfe408d9aa0b14c7e2990589667fa3cce2e6.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "top",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/06/6d/066d7e6e4bac39ea6ebcb68827042a8b7212e0be.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "999"
+},
+{
+    name : "pants",
+    brand:"tommy",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/0b/40/0b402d529b6f56e378eee2d9c89dc703b27d9ff4.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "2999",
+},
+{
+    name : "pajama",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/3e/2e/3e2e9b1cd7ef0b5a90d9dcd40dd7cd33c733e5c7.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "3499",
+
+},
+{
+    name : "jacket",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/d4/2d/d42d0a2c3687777f381eda59677ba056fe48a122.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "4999",
+
+},
+{
+    name : "sweater",
+    brand:"levis",
+    image : "https://lp2.hm.com/hmgoepprod?set=source[/83/2b/832bb47bb34907c35ac09202a2d1c940950b91f5.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+    price : "1799",
+
+},
+]
+
+      
+var WomensData= [];
+
+LadiesItems.map(function(item){
+ 
+    var womensobj ={
         name:item.name,
         brand:item.brand,
-        MRP:item.MRP,
-        img:item.img,
+        img:item.image,
+        MRP:item.price,
     }
-    mensdata.push(mensobj)
+    WomensData.push(womensobj)
 })
 
   DisplayItems()
 
- localStorage.setItem("mensDB",JSON.stringify(mensdata))
+ localStorage.setItem("WomensDB",JSON.stringify(WomensData))
 
  function DisplayItems(){
-     mensdata.map(function(items){
+     WomensData.map(function(items){
 
      
       var div=document.createElement("div")
-      div.style.backgroundColor="rgb(167, 207, 236)"
+         div.style.backgroundColor="rgb(221, 199, 221)"
 
       var img=document.createElement("img")
         img.setAttribute("src",items.img)
@@ -472,7 +707,7 @@ mensitems.map(function(item){
      })
       
  }
- var Bag =JSON.parse(localStorage.getItem("BagDB")) || [];
+ var Bag =JSON.parse(localStorage.getItem("WBagDB")) || [];
  
   function BagAdd(items,butn){
       butn.style.backgroundColor="red"
@@ -487,18 +722,17 @@ function GoTobag(){
 }
 
 
-
-  function filterprice(){
+function filterprice(){
      var change = document.querySelector("#filterprice").value
        document.querySelector("#itemsdiv").textContent=""
      if(change == "low"){
-        var sorted = mensdata.sort(function(a,b){
+        var sorted = WomensData.sort(function(a,b){
              if(Number(a.MRP) > Number(b.MRP)) return 1
              if(Number(a.MRP) < Number(b.MRP)) return -1
          })
      }
      if(change == "high"){
-        var sorted = mensdata.sort(function(a,b){
+        var sorted = WomensData.sort(function(a,b){
              if(Number(a.MRP) < Number(b.MRP)) return 1
              if(Number(a.MRP) > Number(b.MRP)) return -1
          })
@@ -510,13 +744,13 @@ function GoTobag(){
      var change = document.querySelector("#byname").value
        document.querySelector("#itemsdiv").textContent=""
      if(change == "asc"){
-        var sorted = mensdata.sort(function(a,b){
+        var sorted = WomensData.sort(function(a,b){
              if(a.name > b.name) return 1
              if(a.name < b.name) return -1
          })
      }
      if(change == "dsc"){
-        var sorted = mensdata.sort(function(a,b){
+        var sorted = WomensData.sort(function(a,b){
              if(a.name < b.name) return 1
              if(a.name > b.name) return -1
          })
@@ -528,33 +762,39 @@ function GoTobag(){
     function filtername(){
      var change = document.querySelector("#filtername").value
        document.querySelector("#itemsdiv").textContent=""
-     if(change == "jeans"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "top"){
+        var sorted = WomensData.sort(function(a){
              if(a.name == change) return -1
              if(a.name != change) return 1
          })
      }
 
-     if(change == "t-shirt"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "sweater"){
+        var sorted = WomensData.sort(function(a){
              if(a.name == change) return -1
              if(a.name != change) return 1
          })
      }
-     if(change == "backpack"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "jacket"){
+        var sorted = WomensData.sort(function(a){
              if(a.name == change) return -1
              if(a.name != change) return 1
          })
      }
-     if(change == "sneakers"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "pajama"){
+        var sorted =WomensData.sort(function(a){
              if(a.name == change) return -1
              if(a.name != change) return 1
          })
      }
-     if(change == "watch"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "shoes"){
+        var sorted = WomensData.sort(function(a){
+             if(a.name == change) return -1
+             if(a.name != change) return 1
+         })
+     }
+     if(change == "pants"){
+        var sorted = WomensData.sort(function(a){
              if(a.name == change) return -1
              if(a.name != change) return 1
          })
@@ -567,59 +807,35 @@ function GoTobag(){
 function filterbrand(){
      var change = document.querySelector("#filterbrand").value
        document.querySelector("#itemsdiv").textContent=""
+
      if(change == "adidas"){
-        var sorted = mensdata.sort(function(a){
+        var sorted = WomensData.sort(function(a){
              if(a.brand == change) return -1
              if(a.brand != change) return 1
          })
      }
 
-     if(change == "puma"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "tommy"){
+        var sorted =  WomensData.sort(function(a){
             if(a.brand == change) return -1
              if(a.brand != change) return 1
          })
      }
-     if(change == "nike"){
-        var sorted = mensdata.sort(function(a){
+     if(change == "zara"){
+        var sorted =  WomensData.sort(function(a){
             if(a.brand == change) return -1
              if(a.brand != change) return 1
          })
      }
      if(change == "levis"){
-        var sorted = mensdata.sort(function(a){
+        var sorted = WomensData.sort(function(a){
             if(a.brand == change) return -1
              if(a.brand != change) return 1
          })
      }
-     if(change == "fasttrack"){
-        var sorted = mensdata.sort(function(a){
-            if(a.brand == change) return -1
-             if(a.brand != change) return 1
-         })
-     }
-
-     if(change == "tommy"){
-        var sorted = mensdata.sort(function(a){
-            if(a.brand == change) return -1
-             if(a.brand != change) return 1
-         })
-     }
-     if(change == "blueday"){
-        var sorted = mensdata.sort(function(a){
-            if(a.brand == change) return -1
-             if(a.brand != change) return 1
-         })
-     }
-     if(change == "rolex"){
-        var sorted = mensdata.sort(function(a){
-            if(a.brand == change) return -1
-             if(a.brand != change) return 1
-         })
-     }
-     
-  
       DisplayItems(sorted)
     }
 
+
 </script>
+
