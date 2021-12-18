@@ -324,6 +324,11 @@
         nav ul.menu-area ul li a:hover{
             /* color: #164c82; */
         }
+        #name{
+            font-size:20px;
+            font-weight: bold;
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -949,9 +954,11 @@
 
 <script>
 var username=JSON.parse(localStorage.getItem("userDatabase"));
-var currentuser = JSON.parse(localStorage.getItem("currentuser"));
+var currentuser = [JSON.parse(localStorage.getItem("currentuser"))];
 console.log(currentuser);
 
 currentuser.map(function(elem){
+    console.log(elem.nm);
+    document.querySelector("#name").textContent="Welcome  "+elem.nm;
 });
 </script>
