@@ -61,6 +61,7 @@
             font-size: smaller;
         }
         #first{
+            width:1100px;
             background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1200],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s04/november_2021/4114n/4114N3x2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
             /* background-size: 100%; */
             /* background-color: rgb(120, 117, 197); */
@@ -207,6 +208,7 @@
             background: transparent;
             cursor: pointer;
         }
+        
         #shop {
             grid-column-start: 2;
             grid-column-end: 3;
@@ -909,7 +911,7 @@
             <div id="text">
                 <h1 id="within">Soft as stardust</h1>
                 <h4>Velour jumpsuits, quilted trousers, satiny slip dresses & other luxe looks</h4>
-                <button onclick="kidsSection()" class="button1">Shop Now</button>
+                <button onclick="ladiesSection()" class="button1">Shop Now</button>
             </div>
         </div>
 
@@ -918,7 +920,7 @@
             <div id="text">
             <h1 id="within">The Holiday Party</h1>
             <p>Comfy Style. Made Smarter.</p>
-            <button onclick="kidsSection()" class="button1">Shop Now</button>
+            <button onclick="MensSection()" class="button1">Shop Now</button>
         </div>
         </div>
 
@@ -1030,6 +1032,15 @@
         console.log("kids");
         window.location.href="KidsSection.html";
     }
+    
+    function ladiesSection(){
+        window.location.href="ladiesSection.html";
+    }
+    
+    function MensSection(){
+        window.location.href="MensSection.html";
+    }
+
     function logo(){
         window.location.href="landingHandM.html";
     }
