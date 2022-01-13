@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H & M structure</title>
+
+    <style>
+        @import url(//db.onlinewebfonts.com/c/09c8fb44d2c62d99647e4ce58736293e?family=HMSansLatin-Regular);
+
+        #main{
+            display: grid;
+            grid-template-columns:repeat(12,1fr);
+            grid-template-rows: repeat(60,1fr);
+            grid-gap: 15px;
+            justify-content: center;
+            text-align: center;
+        }
+        #header1{
+            display:flex;
+           
+        }
+        #header1 > .header1{
+            width: 30%;
+            display:flex;
+            justify-content: space-between;
+        }
+
+        .header1:first-child{
+            margin-right: 45%;
+        }
+        .logodiv{
+            width:100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 4%;
+        }
+        .logodiv > img{
+            width: 50px;
+            height: 50px;
+        }
+        .categories{
+            margin: auto;
+            /* width:700px; */
+            display:flex;
+            justify-content: space-between;
+        }
+        /* #main>div{ 1170
+            border: 1px solid black;
+        } */
+        #header{
+            /* background-color: aqua; */
+            grid-area: 1/1/3/13 ;
+        }
+        #member{
+            display: flex;
+            justify-content: space-evenly;
+            grid-area: 3/4/4/10 ;
+            font-size: smaller;
+        }
+        #first{
+            width: 1200px;
+            background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1200],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s04/november_2021/4114n/4114N3x2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+            /* background-size: 100%; */
+            /* background-color: rgb(120, 117, 197); */
+            grid-area: 4/4/12/10 ;
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position: center center; 
+            cursor: pointer;
+        }
+        #second{
+            background-image: url(https://i.pinimg.com/originals/ba/3d/27/ba3d27bf605497402afd35c016e8c631.png);
+            /* background-color: rgb(0, 141, 2); */
+            object-fit: fit;
+            text-align: center;
+            grid-area: 12/4/14/10;
+            height: 140px;
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #trending{
+            grid-area: 14/4/16/10;
+            /* border: 1px solid red; */
+            display: flex;
+            overflow: hidden;
+        }
+        #trending p{
+            margin-left: 15px;
+        }
+        #trending img{
+            margin-left: 15px;
+            margin-top: 15px;
+            /* padding: 15px 15px 0 15px; */
+            width: 70px;
+            height: 60%;
+            border-radius: 50%;
+        }
+        #third{
+            background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/ladies_s04/november_2021/1304f/1304F-3x2-soft-as-stardust.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+            /* background-color: rgb(229, 136, 110); */
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position: center center; 
+            grid-area: 16/4/23/10 ;
+            cursor: pointer;
+        }
+        #fourth{
+            background-image: url(https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/men_s04/oktober_2021/3045a/3045A_3x2-the-holiday-party.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]);
+            /* background-color: rgb(197, 205, 78); */
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position: center center; 
+            grid-area: 23/4/31/10 ;
+            cursor: pointer;
+        }
+
+       #fifth{
+            background-image: url(https://www2.hm.com/content/dam/men_s04/november_2021/3275a/3275ab-smiley-x-hm-CPD-01.jpg);
+            /* background-color: rgb(236, 37, 222); */
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position: center center; 
+            grid-area: 31/4/39/10 ;
+            cursor: pointer;
+        }
+
+        #sixth{
+            background-image: url(https://res.cloudinary.com/twenty20/private_images/t_standard-fit/photosp/f8ee0d18-a89e-41a6-8b09-a0f88cc70857/stock-photo-copy-space-celebration-christmas-wrapped-background-holidays-gifts-top-view-new-year-f8ee0d18-a89e-41a6-8b09-a0f88cc70857.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-position: center center; 
+            grid-area: 39/4/47/10 ;
+            cursor: pointer;
+        }
+        #seventh{
+            background-color: rgb(244,237,221);
+            grid-area: 47/1/54/13 ;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(3, 135px);
+        }
+        #one{
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #two{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: center;
+            height:400px;
+            background-color: white;
+            margin-right: 25px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #three{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: center;
+            height:400px;
+            background-color: white;
+            margin-right: 25px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #four{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: center;
+            height:400px;
+            background-color: white;
+            margin-right: 25px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #seventh > div > img{
+            width: 100%;
+            height: 230px;
+        }
+        #eigth{ 
+            /* border:1px solid green; */
+            /* background-color: rgb(26, 193, 219); */
+            grid-area: 54/1/60/13 ;
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(3,1fr);
+            padding: 30px 0 0 0;
+        }
+        #eigth input{
+            width:100px;
+            height: 30px;
+            background: transparent;
+            cursor: pointer;
+        }
+        #shop {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* border:1px solid green; */
+        }
+        #corp {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* border:1px solid red; */
+        }
+        #help {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* border:1px solid yellow; */
+        }
+        #news{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* border:1px solid white; */
+        }
+        #news > input{
+            border: transparent;
+            cursor: pointer;
+        }
+        #contact {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            /* border:1px solid pink; */
+        }
+        #contact > img{
+            padding: 2px 20px;
+            width: 25px; 
+            height: 25px;
+        }
+        #text{
+            text-align:center;
+            color: white;   
+        }
+        #space{
+            width: 100%;
+            height: 60%;
+        }
+        .categories{
+            width: 1170px;
+            margin: 20px auto;
+        }
+        nav{
+            position:absolute;
+            font-size: 16px;
+        }
+        nav > ul{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 1170px;
+            margin:0 auto;
+            padding:0;
+        }
+        nav a {
+            display: block;
+            color:black;
+            text-decoration: none;
+        }
+        nav ul li{
+            color:black;
+            list-style: none;
+        }
+        nav > ul > li > a{
+            padding: 15px 25px;
+        }
+        nav ul > li.dropdown > a:after{
+            position: relative;
+            float: right;
+            content: '';
+            margin-left: 10px;
+            margin-top: 8px;
+        }
+        nav ul.menu-area{
+            padding: 40px 40px 0 40px;
+            background: white;
+            text-align: left;
+            border-bottom: 5px solid;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+            z-index: 1;
+            position:absolute;
+            display:flex;
+            flex-wrap: wrap;
+            width: 1170px;
+            top: -9999px;
+            left: 0;
+        }
+        nav ul li:hover ul.menu-area{
+            font-size: smaller;
+            top:100%;
+        }
+        nav ul.menu-area h3{
+            margin-bottom: 15px;
+            padding: 0 10px;
+        }
+        nav ul.menu-area ul li{
+            padding: 0 10px;            
+            display:block;
+        }
+        nav ul.menu-area ul li a{
+            margin-top: 10px;
+            /* color:grey; */
+            text-transform: none;
+        }
+        nav ul.menu-area ul li a:hover{
+            /* color: #164c82; */
+        }
+        .button1{
+            width: 100px;
+            height:40px;
+            cursor: pointer;
+        }
+        .button2{
+            width: 100px;
+            height:35px;
+            color:white;
+            background-color: black;
+            cursor: pointer;
+        }
+        p>a{
+            text-decoration: none;
+            color:black;
+        }
+        u>a{
+            text-decoration: none;
+            color:black;
+        }
+        
+        u>a:hover{
+            color:grey;
+        }
+        .header1 {
+            width: 380px;
+            height: 100%;
+            display: flex;
+        }
+        .header1 > div {
+            margin-top: 10px;
+            margin-left: 20px;
+            display: flex;
+            line-height: 30px;
+        }
+        #icon2 {
+            width: 25px;
+            margin-right: 5px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3EFoundation%20%2F%20Icon%20%2F%2024%20%2F%20Control%20%2F%20Favourite%20%2F%2000%20Inactive%20Outline%3C%2Ftitle%3E%3Cdefs%3E%3Cpath%20d%3D%22M17.376%201C21.476%201%2024%203.578%2024%207.807c0%201.628-.961%203.63-2.696%205.953-.89%201.192-1.97%202.446-3.196%203.737a71.66%2071.66%200%200%201-3.987%203.865%2071.495%2071.495%200%200%201-1.816%201.58l-.305.251-.305-.252c-.093-.076-.264-.22-.503-.424-.396-.34-.838-.727-1.313-1.155a71.66%2071.66%200%200%201-3.987-3.865c-1.227-1.291-2.305-2.545-3.196-3.737C.961%2011.437%200%209.435%200%207.807%200%203.578%202.524%201%206.624%201c2.08%200%204.23%201.562%205.376%203.58C13.145%202.56%2015.294%201%2017.376%201zM12%2021.79l.18-.154c.383-.329.812-.704%201.273-1.12a69.488%2069.488%200%200%200%203.865-3.746c1.18-1.244%202.217-2.448%203.068-3.587%201.593-2.132%202.462-3.943%202.462-5.286%200-3.64-2.063-5.747-5.565-5.747-1.927%200-4.049%201.768-4.842%203.843L12%207.145l-.44-1.152C10.765%203.919%208.642%202.15%206.716%202.15c-3.502%200-5.565%202.107-5.565%205.747%200%201.343.87%203.154%202.462%205.286.85%201.14%201.887%202.343%203.068%203.587a69.488%2069.488%200%200%200%203.865%203.747A69.313%2069.313%200%200%200%2012%2021.789z%22%20id%3D%22prefix__a%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cuse%20fill%3D%22%23222%22%20xlink%3Ahref%3D%22%23prefix__a%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        }
+        #icon3 {
+            width: 25px;
+            margin-right: 5px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3EFoundation%20%2F%20Icon%20%2F%2024%20%2F%20Navigation%20%2F%20Bag%20%2F%20Outline%20%2F%2000%20Default%3C%2Ftitle%3E%3Cdefs%3E%3Cpath%20d%3D%22M16.495%206v2h-1V6H8.497v2h-1V6h-2.5v3.678c0%201.234-.13%202.682-.407%204.935l-.1.796c-.35%202.788-.44%203.595-.48%204.576-.02.481-.01.854.024%201.103a44.524%2044.524%200%200%200%202.305.424c1.94.305%203.873.488%205.658.488.166%200%20.335-.002.507-.006%201.469-.034%203.026-.203%204.762-.481.183-.03%201.831-.324%202.695-.453a6.87%206.87%200%200%200%20.023-1.079c-.04-.983-.13-1.796-.481-4.58-.04-.313-.07-.554-.098-.788-.278-2.255-.408-3.702-.408-4.935V6h-2.502zm-8.998-.995v-.592C7.497%202.237%209.365%201%2011.999%201c2.646%200%204.496%201.253%204.496%203.463v.542h3.502v4.673C19.997%2014%2021.89%2022%2020.457%2022c-.638%200-4.63%201-8.46%201-4.212%200-8.467-1-8.467-1-1.422%200%20.467-8%20.467-12.322V5.005h3.5zm1%200h6.998v-.542C15.495%202.907%2014.156%202%2012%202c-2.147%200-3.502.897-3.502%202.413v.592z%22%20id%3D%22prefix__a%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cuse%20fill%3D%22%23222%22%20xlink%3Ahref%3D%22%23prefix__a%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        }
+        #contact > img{
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+
+        <div id="header">
+            <div id = "header1">
+                <div class = "header1">
+                    <div>Customer Service</div>
+                    <div>Newsletter</div>
+                    <div><a href="https://www2.hm.com/en_in/customer-service/shopping-at-hm/store-locator" style ="text-decoration: none;">Find a store</a></div>
+                    <div>ooo</div>
+                
+                </div>
+                <div class = "header1">
+                    <div id = "signIn">Sign In</div>
+                    <div> <div id="icon2"></div>Favourite</div>
+                    <div> <div id="icon3"></div>Shopping Bag (0)</div>
+                </div>
+            </div>
+            <div class = "logoDiv">
+                <img src = "data:image/png;base64,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" placeholder = "H&M logo" style = "width:60px; height:60px;" onclick="logo()" />
+            </div>
+            <div class = "categories">
+                <nav>
+                    <ul>
+                        <li class = "dropdown">
+                            <a href="#">Ladies</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>New arrival</h3>
+                                    <li><a href="ladiesSection.html">view all</a></li>
+                                    <li><a href="ladiesSection.html">clothes</a></li>
+                                    <li><a href="ladiesSection.html">view all</a></li>
+                                    <li><a href="ladiesSection.html">clothes</a></li>
+                                    <h3>Trending Now</h3>
+                                    <li><a href="ladiesSection.html">Jackets from Rs.2299</a></li>
+                                    <li><a href="ladiesSection.html">Seasonless Swimwear</a></li>
+                                    <li><a href="ladiesSection.html">Gift Guide</a></li>
+                                    <li><a href="ladiesSection.html">Party Edits</a></li>
+                                    <li><a href="ladiesSection.html">Music , Movies and Logos</a></li>
+                                    <li><a href="ladiesSection.html">A Circular design story</a></li>
+                                    <h3>Deals</h3>
+                                    <li><a href="ladiesSection.html">Socks-Buy 2 get 1 free!</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Shop by Product</h3>
+                                    <li><a href="ladiesSection.html">view all</a></li>
+                                    <li><a href="ladiesSection.html">Tops & T-shirts</a></li>
+                                    <li><a href="ladiesSection.html">Dresses</a></li>
+                                    <li><a href="ladiesSection.html">Shirts & Blouses</a></li>
+                                    <li><a href="ladiesSection.html">Sweatshirts & Hoodies</a></li>
+                                    <li><a href="ladiesSection.html">Cardigons & Sweaters</a></li>
+                                    <li><a href="ladiesSection.html">Knitwears</a></li>
+                                    <li><a href="ladiesSection.html">Blazzers</a></li>
+                                    <li><a href="ladiesSection.html">Jacket & Coats</a></li>
+                                    <li><a href="ladiesSection.html">Basics</a></li>
+                                    <li><a href="ladiesSection.html">Trousers</a></li>
+                                    <li><a href="ladiesSection.html">Jeans</a></li>
+                                    <li><a href="ladiesSection.html">Nightwear</a></li>
+                                    <li><a href="ladiesSection.html">Laungwear</a></li>
+                                    <li><a href="ladiesSection.html">Sportswear</a></li>
+                                    <li><a href="ladiesSection.html">Shorts</a></li>
+                                    <li><a href="ladiesSection.html">Skirts</a></li>
+                                    <li><a href="ladiesSection.html">Jumpsuits</a></li>
+                                    <li><a href="ladiesSection.html">Swimwear & Beachwear</a></li>
+                                    <li><a href="ladiesSection.html">Shoes</a></li>
+                                    <li><a href="ladiesSection.html">Accessories</a></li>
+                                    <li><a href="ladiesSection.html">Lingerie</a></li>
+                                    <li><a href="ladiesSection.html">Socks & Tights</a></li>
+                                    <li><a href="ladiesSection.html">Maternity Wear</a></li>
+                                    <li><a href="ladiesSection.html">Plus Size</a></li>
+                                    <li><a href="ladiesSection.html">Dog Clothes & Accessories</a></li>
+                                    <li><a href="ladiesSection.html">Premium Section</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Sustainability</h3>
+                                    <li><a href="">Our Products</a></li>
+                                    <li><a href="">H&M take Care</a></li>
+                                    <li><a href="">Learn More</a></li>
+                                    <h3>Magazine</h3>
+                                    <li><a href="">Magazine</a></li>
+                                    <h3>Shop by Occasion</h3>
+                                    <li><a href="ladiesSection.html">Party Wear</a></li>
+                                    <li><a href="ladiesSection.html">Casual Wear</a></li>
+                                    <li><a href="ladiesSection.html">Office Wear</a></li>
+                                    <li><a href="ladiesSection.html">Laungwear</a></li>
+                                </ul>
+                            </ul>
+                        
+                        </li>
+                        <li class = "dropdown">
+                            <a href="#">Men</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>New arrival</h3>
+                                    <li><a href="MensSection.html">view all</a></li>
+                                    <li><a href="MensSection.html">clothes</a></li>
+                                    <li><a href="MensSection.html">view all</a></li>
+                                    <li><a href="MensSection.html">clothes</a></li>
+                                    <h3>Trending Now</h3>
+                                    <li><a href="MensSection.html">Jackets from Rs.2299</a></li>
+                                    <li><a href="MensSection.html">Seasonless Swimwear</a></li>
+                                    <li><a href="MensSection.html">Gift Guide</a></li>
+                                    <li><a href="MensSection.html">Party Edits</a></li>
+                                    <li><a href="MensSection.html">Music , Movies and Logos</a></li>
+                                    <li><a href="MensSection.html">A Circular design story</a></li>
+                                    <h3>Deals</h3>
+                                    <li><a href="MensSection.html">Socks-Buy 2 get 1 free!</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Shop by Product</h3>
+                                    <li><a href="MensSection.html">view all</a></li>
+                                    <li><a href="MensSection.html">Tops & T-shirts</a></li>
+                                    <li><a href="MensSection.html">Dresses</a></li>
+                                    <li><a href="MensSection.html">Shirts & Blouses</a></li>
+                                    <li><a href="MensSection.html">Sweatshirts & Hoodies</a></li>
+                                    <li><a href="MensSection.html">Cardigons & Sweaters</a></li>
+                                    <li><a href="MensSection.html">Knitwears</a></li>
+                                    <li><a href="MensSection.html">Blazzers</a></li>
+                                    <li><a href="MensSection.html">Jacket & Coats</a></li>
+                                    <li><a href="MensSection.html">Basics</a></li>
+                                    <li><a href="MensSection.html">Trousers</a></li>
+                                    <li><a href="MensSection.html">Jeans</a></li>
+                                    <li><a href="MensSection.html">Nightwear</a></li>
+                                    <li><a href="MensSection.html">Laungwear</a></li>
+                                    <li><a href="MensSection.html">Sportswear</a></li>
+                                    <li><a href="MensSection.html">Shorts</a></li>
+                                    <li><a href="MensSection.html">Skirts</a></li>
+                                    <li><a href="MensSection.html">Jumpsuits</a></li>
+                                    <li><a href="MensSection.html">Swimwear & Beachwear</a></li>
+                                    <li><a href="MensSection.html">Shoes</a></li>
+                                    <li><a href="MensSection.html">Accessories</a></li>
+                                    <li><a href="MensSection.html">Lingerie</a></li>
+                                    <li><a href="MensSection.html">Socks & Tights</a></li>
+                                    <li><a href="MensSection.html">Maternity Wear</a></li>
+                                    <li><a href="MensSection.html">Plus Size</a></li>
+                                    <li><a href="MensSection.html">Dog Clothes & Accessories</a></li>
+                                    <li><a href="MensSection.html">Premium Section</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Sustainability</h3>
+                                    <li><a href="">Our Products</a></li>
+                                    <li><a href="">H&M take Care</a></li>
+                                    <li><a href="">Learn More</a></li>
+                                    <h3>Magazine</h3>
+                                    <li><a href="">Magazine</a></li>
+                                    <h3>Shop by Occasion</h3>
+                                    <li><a href="MensSection.html">Party Wear</a></li>
+                                    <li><a href="MensSection.html">Casual Wear</a></li>
+                                    <li><a href="MensSection.html">Office Wear</a></li>
+                                    <li><a href="MensSection.html">Laungwear</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="#">Baby</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>Newborn</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <h3>Baby Girl</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <li><a href="KidsSection.html">Costumes</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Baby Boy</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <li><a href="KidsSection.html">Costumes</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Shop by Products</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <li><a href="KidsSection.html">Costumes</a></li>
+                                    <li><a href="KidsSection.html">Sale</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Trending Now</h3>
+                                    <li><a href="KidsSection.html">Baby Exclusive</a></li>
+                                    <li><a href="KidsSection.html">The Holiday Shop</a></li>
+                                    <li><a href="KidsSection.html">Party & Occasion</a></li>
+                                    <li><a href="KidsSection.html">Multipacks</a></li>
+                                    <li><a href="KidsSection.html">The Character Shop</a></li>
+                                    <li><a href="KidsSection.html">Basics</a></li>
+                                    <h3>Sustainability</h3>
+                                    <li><a href="KidsSection.html">Our Products</a></li>
+                                    <li><a href="KidsSection.html">H&M take Care</a></li>
+                                    <li><a href="KidsSection.html">Learn More</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="#">Kids</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>Newborn</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <h3>Baby Girl</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <li><a href="KidsSection.html">Costumes</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Baby Boy</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <li><a href="KidsSection.html">Costumes</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Shop by Products</h3>
+                                    <li><a href="KidsSection.html">View all</a></li>
+                                    <li><a href="KidsSection.html">New Arrivals</a></li>
+                                    <li><a href="KidsSection.html">Clothing</a></li>
+                                    <li><a href="KidsSection.html">Outerwear</a></li>
+                                    <li><a href="KidsSection.html">Accessories</a></li>
+                                    <li><a href="KidsSection.html">Shoes</a></li>
+                                    <li><a href="KidsSection.html">Costumes</a></li>
+                                    <li><a href="KidsSection.html">Sale</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Trending Now</h3>
+                                    <li><a href="KidsSection.html">Baby Exclusive</a></li>
+                                    <li><a href="KidsSection.html">The Holiday Shop</a></li>
+                                    <li><a href="KidsSection.html">Party & Occasion</a></li>
+                                    <li><a href="KidsSection.html">Multipacks</a></li>
+                                    <li><a href="KidsSection.html">The Character Shop</a></li>
+                                    <li><a href="KidsSection.html">Basics</a></li>
+                                    <h3>Sustainability</h3>
+                                    <li><a href="KidsSection.html">Our Products</a></li>
+                                    <li><a href="KidsSection.html">H&M take Care</a></li>
+                                    <li><a href="KidsSection.html">Learn More</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="#">Divided</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>New arrival</h3>
+                                    <li><a href="">Clothes</a></li>
+                                    <li><a href="">Sales & Accessories</a></li>
+                                    <h3>Trending Now</h3>
+                                    <li><a href="">Graphics</a></li>
+                                    <li><a href="">Party Edit</a></li>
+                                    <li><a href="">Sweatshirts from Rs.799</a></li>
+                                    <li><a href="">Jackets from Rs.1499</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Shop by Product</h3>
+                                    <li><a href="">Garment care</a></li>
+                                    <li><a href="">View all</a></li>
+                                    <li><a href="">Divided-Basics</a></li>
+                                    <li><a href="">Tops</a></li>
+                                    <li><a href="">Shirts & Blouses</a></li>
+                                    <li><a href="">Sweatshirts & Hoodies</a></li>
+                                    <li><a href="">Cardigons & Jumpers</a></li>
+                                    <li><a href="">Knitwears</a></li>
+                                    <li><a href="">Blazzers</a></li>
+                                    <li><a href="">Jacket & Coats</a></li>
+                                    <li><a href="">Dresses</a></li>
+                                    <li><a href="">Trousers</a></li>
+                                    <li><a href="">Jeans</a></li>
+                                    <li><a href="">Nightwear</a></li>
+                                    <li><a href="">Laungwear</a></li>
+                                    <li><a href="">Sportswear</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Shoes</a></li>
+                                    <li><a href="">Skirts</a></li>
+                                    <li><a href="">Underwear & Nightwear</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Sustainability</h3>
+                                    <li><a href="">Our Products</a></li>
+                                    <li><a href="">H&M Take care</a></li>
+                                    <li><a href="">Learn more</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="#">Sale</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>Women</h3>
+                                    <li><a href="ladiesSection.html">view all</a></li>
+                                    <li><a href="ladiesSection.html">clothes</a></li>
+                                    <li><a href="ladiesSection.html">view all</a></li>
+                                    <li><a href="ladiesSection.html">Tops & T-shirts</a></li>
+                                    <li><a href="ladiesSection.html">Dresses</a></li>
+                                    <li><a href="ladiesSection.html">Shirts & Blouses</a></li>
+                                    <li><a href="ladiesSection.html">Sweatshirts & Hoodies</a></li>
+                                    <li><a href="ladiesSection.html">Cardigons & Sweaters</a></li>
+                                    <li><a href="ladiesSection.html">Knitwears</a></li>
+                                    <li><a href="ladiesSection.html">Blazzers</a></li>
+                                    <li><a href="ladiesSection.html">Jacket & Coats</a></li>
+                                    <li><a href="ladiesSection.html">Basics</a></li>
+                                    <li><a href="ladiesSection.html">Trousers</a></li>
+                                    <li><a href="ladiesSection.html">Jeans</a></li>
+                                    <li><a href="ladiesSection.html">Nightwear</a></li>
+                                    <li><a href="ladiesSection.html">Laungwear</a></li>
+                                    <li><a href="ladiesSection.html">Sportswear</a></li>
+                                    <li><a href="ladiesSection.html">Shorts</a></li>
+                                    <li><a href="ladiesSection.html">Skirts</a></li>
+                                    <li><a href="ladiesSection.html">Jumpsuits</a></li>
+                                    <li><a href="ladiesSection.html">Swimwear & Beachwear</a></li>
+                                    <li><a href="ladiesSection.html">Shoes</a></li>
+                                    <li><a href="ladiesSection.html">Accessories</a></li>
+                                    <li><a href="ladiesSection.html">Lingerie</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Divided</h3>
+                                    <li><a href="">view all</a></li>
+                                    <li><a href="">clothes</a></li>
+                                    <li><a href="">view all</a></li>
+                                    <li><a href="">Tops & T-shirts</a></li>
+                                    <li><a href="">Dresses</a></li>
+                                    <li><a href="">Shirts & Blouses</a></li>
+                                    <li><a href="">Sweatshirts & Hoodies</a></li>
+                                    <li><a href="">Cardigons & Sweaters</a></li>
+                                    <li><a href="">Knitwears</a></li>
+                                    <li><a href="">Blazzers</a></li>
+                                    <li><a href="">Jacket & Coats</a></li>
+                                    <li><a href="">Basics</a></li>
+                                    <li><a href="">Trousers</a></li>
+                                    <li><a href="">Jeans</a></li>
+                                    <li><a href="">Nightwear</a></li>
+                                    <li><a href="">Laungwear</a></li>
+                                    <li><a href="">Sportswear</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Men</h3>
+                                    <li><a href="MensSection.html">view all</a></li>
+                                    <li><a href="MensSection.html">clothes</a></li>
+                                    <li><a href="MensSection.html">view all</a></li>
+                                    <li><a href="MensSection.html">Tops & T-shirts</a></li>
+                                    <li><a href="MensSection.html">Dresses</a></li>
+                                    <li><a href="MensSection.html">Shirts & Blouses</a></li>
+                                    <li><a href="MensSection.html">Sweatshirts & Hoodies</a></li>
+                                    <li><a href="MensSection.html">Cardigons & Sweaters</a></li>
+                                    <li><a href="MensSection.html">Knitwears</a></li>
+                                    <li><a href="MensSection.html">Blazzers</a></li>
+                                    <li><a href="MensSection.html">Jacket & Coats</a></li>
+                                    <li><a href="MensSection.html">Basics</a></li>
+                                    <li><a href="MensSection.html">Trousers</a></li>
+                                    <li><a href="MensSection.html">Jeans</a></li>
+                                    <li><a href="MensSection.html">Nightwear</a></li>
+                                    <li><a href="MensSection.html">Laungwear</a></li>
+                                    <li><a href="MensSection.html">Sportswear</a></li>
+                                    <li><a href="MensSection.html">Premium Section</a></li>
+                                    <h3>Baby</h3>
+                                    <li><a href="KidsSection.html">Baby Girls</a></li>
+                                    <li><a href="KidsSection.html">Baby Boys</a></li>
+                                    <li><a href="KidsSection.html">Newborn</a></li>
+                                    <li><a href="KidsSection.html">Veiw all products</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>Kids</h3>
+                                    <li><a href="KidsSection.html">Girls</a></li>
+                                    <li><a href="KidsSection.html">Boys</a></li>
+                                    <li><a href="KidsSection.html">View all products</a></li>
+                                    <li><a href="KidsSection.html">Last Chances up to 70% off</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="#">Sustainability</a>
+                            <ul class="menu-area">                        
+                                <ul>
+                                    <h3>Our Work</h3>
+                                    <li><a href="">The Latest</a></li>
+                                    <li><a href="">Let's change</a></li>
+                                    <li><a href="">Let's Innovate</a></li>
+                                    <li><a href="">Let's be fair</a></li>
+                                    <li><a href="">Let's be for all</a></li>
+                                    <li><a href="">Let's be transparent</a></li>
+                                    <li><a href="">Let's clean up</a></li>
+                                    <li><a href="">Let's close the loop</a></li>
+                                    <li><a href="">Praise from others</a></li>
+                                    
+                                </ul>
+                                <ul>
+                                    <h3>Our products</h3>
+                                    <li><a href="">Conscious products explained</a></li>
+                                    <li><a href="">Women</a></li>
+                                    <li><a href="">Baby</a></li>
+                                    <li><a href="">Kids</a></li>
+                                    <li><a href="">Men</a></li>
+                                    <li><a href="">Divided</a></li>
+                                </ul>
+                                <ul>
+                                    <h3>H&M Take Care</h3>
+                                    <li><a href="">Repair, remake and refresh</a></li>
+                                    <h3>Our commitment</h3>
+                                    <li><a href="">H&M Group Sustainability</a></li>
+                                    <li><a href="">Strategy</a></li>
+                                    <li><a href="">H&M Group Sustainability Report</a></li>
+                                    <li><a href="">H&M Foundation</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div  id="member">
+            <p>Become a member & earn 100 welcome points.</p>
+            <p>Estimated delivery time:2-7 days</p>
+            <p>download the H&M App</p>
+        </div>
+        <div  id="first">
+            <div id="space"></div>
+            <div id="text">
+                <h3 id="within">Online deal</h3>
+                <h1>Kids faves - now from Rs.999</h1>
+                <p>Valid on selected items at hm.com until 20th Dec'21 or while stock lasts</p>
+                <button onclick="kidsSection()" class="button1">Shop Now</button>
+            </div>
+        </div>
+
+        <div  id="second">
+            <h2>Snuggle up in soft knitwear starting Rs. 699</h2>
+            <p>The knits you need, now!</p>
+            <button onclick="knitwearSection()" class="button2">Shop Now</button>
+        </div>
+
+        <div id="trending">
+            <!-- <marquee scrollamount="10" direction="left"> -->
+                <div>
+                    <img src="https://i.pinimg.com/736x/4a/91/a6/4a91a6b4f09c7df99a6352db06f7a701.jpg" alt="">
+                    <p>Men</p>
+                </div>
+                <div>
+                    <img src="https://cdn.shopclues.com/images/thumbnails/9096/320/320/rerrr1416992632.jpg" alt="">
+                    <p>Ladies</p>
+                </div>
+                <div>
+                    <img src="https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2017/08/KidsMisbehaving-142018498-770x533-1-650x428.jpg" alt="">
+                    <p>Kids</p>
+                </div>
+                <div>
+                    <img src ="data:image/jpeg;base64,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" alt="">
+                    <p>Baby</p>
+                </div>
+                <div>
+                    <img src="https://www.akc.org/wp-content/uploads/2018/01/Poodle-puppy-wearing-a-jacket-in-winter-500x486.jpeg" alt="">
+                    <p>Dog</p>
+                </div>
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/61-jBuhtgZL._UL1500_.jpg" alt="">
+                    <p>T-shirts</p>
+                </div>
+                <div>
+                    <img src="data:image/jpeg;base64,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" alt="">
+                    <p>Blazzers</p>
+                </div>
+                <div>
+                    <img src="https://5.imimg.com/data5/FN/OU/MY-2825908/ladies-coat-500x500.jpg" alt="">
+                    <p>Coat</p>
+                </div>
+                <div>
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sweatshirts-lead-1629206685.jpg?crop=0.566xw:1.00xh;0.220xw,0&resize=640:*" alt="">
+                    <p>Hoodies</p>
+                </div>
+                <div>
+                    <img src="https://camillestyles.com/wp-content/uploads/2018/04/e7ec3ccc-1flagpole-768x983.jpg" alt="">
+                    <p>Swimwear</p>
+                </div>
+                <div>
+                    <img src="https://www.apetogentleman.com/smart-casual/smart-casual-sep-1/" alt="">
+                    <p>Casual</p>
+                </div>
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/51q2t2DUpaL._AC_SX425_.jpg" alt="">
+                    <p>Shoes</p>
+                </div>
+                <div>
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20200929/xW7P/5f723cc4aeb269d563ccd030/-1117Wx1400H-441083053-skyblue-MODEL.jpg" alt="">
+                    <p>Swaeters</p>
+                </div>
+            <!-- </marquee> -->
+        </div>
+
+        <div  id="third">
+            <div id="space"></div>
+
+            <div id="text">
+                <h1 id="within">Soft as stardust</h1>
+                <h4>Velour jumpsuits, quilted trousers, satiny slip dresses & other luxe looks</h4>
+                <button onclick="ladiesSection()" class="button1">Shop Now</button>
+            </div>
+        </div>
+
+        <div  id="fourth">
+            <div id="space"></div>
+            <div id="text">
+            <h1 id="within">The Holiday Party</h1>
+            <p>Comfy Style. Made Smarter.</p>
+            <button onclick="MensSection()" class="button1">Shop Now</button>
+        </div>
+        </div>
+
+        <div  id="fifth">
+            <div id="space"></div>
+                <div id="text">
+                <img src = "https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/men_s04/november_2021/3275a/3275-smiley-x-hm-CPD-logo.png]&scale=width[global.width],height[15000],options[global.options]&sink=format[png],quality[global.quality]" style = "width:800px; height:100px"/>
+                <h4>Put a smile on your style</h4>
+                <button onclick="kidsSection()" class="button1">Shop Now</button>
+            </div>
+        </div>
+
+        <div  id="sixth">
+            <div id="space"></div>
+                <div id="text">
+                <h1 id="within">Ho-Ho-Ho! It's holiday time.</h1>
+                <p>Time to find your kids' fav for the season.</p>
+                <button onclick="kidsSection()" class="button1">Shop Now</button>
+            </div>
+        </div>
+        
+        <div  id="seventh">
+            <div id="one">
+                <h1>MAGAZINE</h1>
+                <P>A WORLD OF INSPIRATION</P>
+                <u><a href="">READ H&M MAGAZINE</a></u>
+
+            </div>
+            <div id="two">
+                <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/6204-Holiday-BTS-still-0807-739.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
+                <p>INSIDE H&M</p>
+                <p><b>Sharing is always a season</b></p>
+                <br><br>
+                <p class = "bottom"><a href="">Read the Story &rarr;</a></p>
+            </div>
+            <div id="three">
+                <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/HM-TOP-Sweater-Vest-Article-Image-v2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
+                <p>INSIDE H&M</p>
+                <p><b>How to Wear a Sweater Vest</b></p>
+                <br><br>
+                <p class = "bottom"><a href="">Read the Story &rarr;</a></p>
+            </div>
+            <div id="four">
+                <img src ="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s04/magazine-2021-s04/2094-Magazine-01-3x2-Landscape-1688x1126.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]"  />
+                <p>INSIDE H&M</p>
+                <p><b>A circular design Story</b></p>
+                <br><br>
+                <p><a href="">Read the Story &rarr;</a></p>
+            </div>
+        </div>
+
+        <div  id="eigth">
+            <div id = "shop">
+                <b>SHOP</b>
+                <a href="ladiesSection.html"><p>Ladies</p></a>
+                <a href="MensSection.html"><p>Men</p></a>
+                <a href="KidsSection.html"><p>Baby</p></a>
+                <a href="KidsSection.html"><p>Kids</p></a>
+            </div>
+
+            <div id="corp">
+                <b>CORPORATE INFO</b>
+                <p>Career at H&M</p>
+                <p>About H&M group</p>
+                <p>Sustainability</p>
+                <p>Press</p>
+                <p>Investor relation</p>
+                <p>corporate governance</p>
+            </div>
+            <div id = "help">
+                
+                <b>HELP</b>
+                <p>Customer Service</p>
+                <p>My H&M</p>
+                <p>Find a Store</p>
+                <p>Legal & Privacy</p>
+                <p>Contact</p>
+            </div>
+            <div id = "news">
+                <b>SIGN UP FOR NEWS LETTER</b>
+                <p>Sign up now and be the first to know about exclusive offer, latest fashion news and style tips!</p>
+                <input type ="button" value = "READ MORE &rarr;" onclick ="logo()" >
+            </div>
+            <div id = "contact">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-256.png" alt="fb" onclick="fb()" />
+                <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-256.png" alt="twitter" onclick="twitter()" />
+                <img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-256.png" alt="insta" onclick="insta()" />
+                <img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Youtube_glyph_svg-256.png" alt="youtube" onclick="youtube()" />
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Pinterest_svg-256.png" alt="pinterest" onclick="pinterest()" />
+                <p style = "width: 800px; margin: auto;">
+                    The content of this site is copyright-protected and is the property of H & M Hennes & Mauritz AB. 
+                    H&M’s business concept is to offer fashion and quality at the best price in a sustainable way. 
+                    H&M has since it was founded in 1947 grown into one of the world's leading fashion companies.
+                </p>
+                <img src = "https://www.vectorkhazana.com/assets/images/products/Hennes-Mauritz-Logo.jpg" onclick = "logo()" width="300px" height="30px" />
+                <p>INDIA | Rs.</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    var username=JSON.parse(localStorage.getItem("userDatabase"));
+    var currentuser = [JSON.parse(localStorage.getItem("currentuser"))];
+    console.log(currentuser);
+
+    currentuser.map(function(elem){
+        console.log(elem.nm);
+        document.querySelector("#signIn").textContent="Welcome,  "+elem.nm;
+    });
+
+    function login(){
+        window.location.href="login.html";
+    }
+    function kidsSection(){
+        console.log("kids");
+        window.location.href="KidsSection.html";
+    }
+
+    function ladiesSection(){
+        window.location.href="ladiesSection.html";
+    }
+    
+    function MensSection(){
+        window.location.href="MensSection.html";
+    }
+
+    function logo(){
+        window.location.href="welcome.html";
+    }
+    function fb(){
+        window.open("https://www.facebook.com/hmindiahm/?brand_redir=21415640912","_blank");
+    }
+    function twitter(){
+        window.open("https://twitter.com/hm","_blank");
+    }
+    function insta(){
+        window.open("https://www.instagram.com/hm/","_blank");
+    }
+    function pinterest(){
+        window.open("https://www.pinterest.com/hm/","_blank");
+    }
+    function youtube(){
+        window.open("https://www.youtube.com/user/hennesandmauritz", '_blank');
+    }
+    
+</script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H & M Mens section</title>
+    <title>H & M Kids section</title>
 
 <style>
 #header{
@@ -144,9 +144,12 @@ h2{
     width: 60%;
     height: 10% ;
     padding: 20px;
-    margin-left: 40px;
+    margin-left: 450px;
     margin-bottom: 30px;
- 
+}
+
+#filterdiv > select{
+    margin-right: 60px;
 }
 
 #itemsdiv{
@@ -217,7 +220,7 @@ button{
 </style>
 
 </head>
-<body >
+<body style="background-color: rgb(240, 199, 223);">
     <div id="header">
 
           
@@ -229,7 +232,7 @@ button{
                 <div>ooo</div>
             </div> 
             <div id="left">
-                 <div id="icon1">Sign In</div> 
+                 <div id="icon1"><a href="login.html" style="text-decoration-line: none;color: black;">Sign In</a></div> 
                  <div id="icon2">Favourite</div>
                 <div id="icon3"> 
             
@@ -274,9 +277,9 @@ button{
     <div id="bodydiv">
 
         <div id="container">
-            <p>HM.com/Mens Items</p>
+            <p>HM.com/Kids Items</p>
             <div id="firstphoto">
-                <img src="https://image.shutterstock.com/z/stock-photo-yes-winners-four-cheerful-young-men-are-standing-and-gesturing-for-the-victory-on-pure-background-654931051.jpg" alt="image">
+                <img src="https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s04/november_2021/4114m/4114M-3x2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]" alt="image">
             </div>
             <div id="middiv">
                 <p>Online deal</p>
@@ -308,8 +311,8 @@ button{
         <option value="backpack">Bags</option>
         <option value="sneakers">Shoes</option>
         <option value="watch">Watch</option>
-    </select>
-    <select id="filterbrand" onchange="filterbrand()">
+        </select>
+        <select id="filterbrand" onchange="filterbrand()">
         <option value="--">Filter by Brand</option>
         <option value="adidas">Adidas</option>
         <option value="puma">Puma</option>
@@ -319,7 +322,7 @@ button{
         <option value="tommy">Tommy</option>
         <option value="blueday">Blue Day</option>
         <option value="rolex">Rolex</option>
-    </select>
+        </select>
     </div>
 <div id="content">
 
@@ -408,32 +411,31 @@ button{
 </body>
 
 <script>
-var mensitems = [
-	{name:"sneakers",brand:"adidas",MRP:2999,img:"https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/12708792/2021/6/8/59c44174-5d0c-413f-86e8-776d6e9e26291623125256961-ADIDAS-Men-Sports-Shoes-5691623125256370-1.jpg"},
-	{name:"sneakers",brand:"adidas",MRP:3999,img:"https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/12708736/2021/8/9/784ad5e5-59d9-44bb-99f1-7893205604cb1628504449282-ADIDAS-Men-Navy-blue--Grey-Woven-Design-Statix-Running-Shoes-1.jpg"},
-	{name:"t-shirt",brand:"levis",MRP:1999,img:"https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1424142/2016/7/18/11468826163576-Levis-Grey-Printed-T-shirt-7771468826163395-1.jpg"},
-	{name:"t-shirt",brand:"nike",MRP:2599,img:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de4484be-3934-4a16-bf70-dc82c8b94738/pro-dri-fit-adv-short-sleeve-top-TBPNdk.png"},
-	{name:"backpack",brand:"fasttrack",MRP:2899,img:"https://5.imimg.com/data5/BW/GR/MY-28005146/fastrack-laptop-backpack-for-men-ac022nbk02-500x500.png"},
-	{name:"backpack",brand:"puma",MRP:3999,img:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/076581/01/fv/fnd/IND/fmt/png"},
-	{name:"jeans",brand:"levis",MRP:3433,img:"https://i.ebayimg.com/images/g/lo4AAOSwMs5dliDH/s-l400.jpg"},
-	{name:"jeans",brand:"levis",MRP:4999,img:"https://i.ebayimg.com/images/g/3gEAAOSwq4NebngU/s-l640.jpg"},
-	{name:"watch",brand:"tommy",MRP:2988,img:"https://cf.shopee.com.my/file/4a4fdcef4fc5ce6e7cead4e3c564b177"},
-	{name:"watch",brand:"blueday",MRP:3990,img:"https://5.imimg.com/data5/EM/CT/PY/SELLER-15604743/day-and-date-watch-for-men-boys-iik-708m-dnd-500x500.jpg"},
-	{name:"bag",brand:"adidas",MRP:2999,img:"https://rukminim1.flixcart.com/image/714/857/k0sgl8w0/backpack/n/3/g/men-parkhood-bos-backpack-9203431-backpack-adidas-original-imafkhje2krny76h.jpeg?q=50"},
-	{name:"sneakers",brand:"nike",MRP:3999,img:"https://i.pinimg.com/originals/91/50/85/91508533ef252b1061d3372a4796297f.png"},
-	{name:"t-shirt",brand:"nike",MRP:1999,img:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8f30288b-0793-4657-9bff-9809cd854271/sportswear-mens-t-shirt-zTB7SW.png"},
-	{name:"t-shirt",brand:"nike",MRP:2599,img:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/224b3e8a-b3c2-4940-b124-cbaf5386de98/dri-fit-run-wild-run-short-sleeve-graphic-running-top-8qnp7v.png"},
-	{name:"backpack",brand:"levis",MRP:2899,img:"https://ih1.redbubble.net/image.1489583732.6547/ur,backpack_front,square,600x600.jpg"},
-	{name:"backpack",brand:"puma",MRP:3999,img:"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/076755/17/fnd/IND/fmt/png/Man-City-Performance-Backpack"},
-	{name:"jeans",brand:"levis",MRP:3433,img:"https://m.media-amazon.com/images/I/81TpF+JRlaL._UY550_.jpg"},
-	{name:"jeans",brand:"levis",MRP:4999,img:"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fbe%2F6a%2Fbe6a2fd5b0d7248b21274508bcfad645db2ad2ef.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_jeans%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
-	{name:"watch",brand:"fasttrack",MRP:2988,img:"https://staticimg.titan.co.in/Fastrack/Catalog/68006PP02_1.jpg?pView=pdp"},
-	{name:"watch",brand:"rolex",MRP:3990,img:"https://content.rolex.com/dam/2021/upright-bba-with-shadow/m126234-0050.png?impolicy=v6-upright&imwidth=270"},
+    var kidsitems = [
+    {name:"skirt",brand:"adidas",MRP:2999,img:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRAGllUHbHsDr9ODbMT9tCSV2xTc8H8NlmfPdlKus3UitdKmdoRC7mUBQbQIoAip8AsiLlt8NnPjC6Jti491IYQOBV-wCH0FyMVn8JysnB7&usqp=CAE"},
+	{name:"skirt",brand:"adidas",MRP:3999,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR6vQ4qjejLwQk0wlUCOXH-8uvVdk3uKOeCZbnebdjGvU4Ze6xFe3FhU9-CaeoNxagjNgEL48H3Q_H0hY5t2jf-xAEhrDz7TzGa4YRd5Nii&usqp=CAE"},
+	{name:"t-shirt",brand:"levis",MRP:1999,img:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQVTSMm8HmhLRe_f6EdO0WfgseQLqAp5clcWJrrp2dR_D2A9KiX-XSNjhiYILFVbDDeoHr6bKoTlynRVbsAUGWg7AG05ZGX6mSAA4ALvY4YwsgEavQFbO3UJA&usqp=CAE"},
+	{name:"t-shirt",brand:"nike",MRP:2599,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRUeUlPfTT0n9NORJcINYAm3DFa0tkL_tcPzwDlW0Cwy8doApgWqzM8pvlgEYUPx-zpfsyL-TH-Wz95K47nYBDsJOiNsYasmNJG61htSERee4RS3SNuDXe2&usqp=CAE"},
+	{name:"shirt",brand:"fasttrack",MRP:2899,img:"https://cdn.shopify.com/s/files/1/0523/3252/7770/products/491-A.jpg?v=1629440697"},
+	{name:"shirt",brand:"puma",MRP:3999,img:"https://cdn.shopify.com/s/files/1/0523/3252/7770/products/396-A.jpg?v=1629445052"},
+	{name:"toys",brand:"levis",MRP:3433,img:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTW0wP_XUfdztZZGOn6e0VAsovM_85iItsY74JLwXWJd2uB2B_iGGSNA-MdWryTeI-e8LG6yXhXr93QXih64SHTU15gTmA9KyR8-oiWwzBVuG3SZoTNZc8n&usqp=CAE"},
+	{name:"toys",brand:"levis",MRP:4999,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ7BmOyly3Jy-awucyet6jQ7_ogAMXTXE6D0XRgeOiW3uNsy7Fn02qmsOTvz7N1OBemHzDv7reGadxxDLnVlMPgU46LcFOnTJrqke8SCaMXrdxQbZ3XOyjf&usqp=CAE"},
+	{name:"shoe",brand:"tommy",MRP:2988,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTIBaerp--yUnm8nPt0Wo9RrZTg93JNtaspO9pwt0PEFPzpyR1c1-y6frO024L7l-4JkKV2C_g7CuM3tbTmoKSd5QcVieVU222_RlDhgS6CyTP_fFqiB2NM&usqp=CAE"},
+	{name:"shoe",brand:"blueday",MRP:3990,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTRzZPp3BDjYQfSsz4t71LJo0yzmEDu65ECB42f9U567kv7lkefegleNJElhEd6t2le5Jg1Nl7lbRKavkKg20CbVeBwAC2Z3-sQZmRMIRGd&usqp=CAE"},
+	{name:"shirt",brand:"adidas",MRP:2999,img:"https://cdn.shopify.com/s/files/1/0523/3252/7770/products/354-B_300x.jpg?v=1629458343"},
+	{name:"skirt",brand:"nike",MRP:3999,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSF02N7lR_7R7t1TrNH6dKt2EPXCxaSmi1KW4JkLSWD8m7xvQz-C3p6i-ypBWtOBEmH7jTtLLdtR6tsG9Am36a0gdXunYxfsdV9_cF8v-es&usqp=CAE"},
+	{name:"t-shirt",brand:"nike",MRP:1999,img:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSv4JFFvIebwWjdyv6UsnbxKzBTt0wqObptr0Xal297F3EoCZoaPpWSnGefKvP92xlxPRXnZgxRAfUvHJfRXAKlDACrK0W9YJ4GwvpyqvDu27X-Zr5sbxPLwQ&usqp=CAE"},
+	{name:"t-shirt",brand:"nike",MRP:2599,img:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTwWEiw9iAF8PtrU19s8jLVUQBXCLhnDt3nNIFqrXE0HC2Sx_GuhdLQJIlg5fTevoceqeoOfd2Q5-c2GK5_hnx66MEFuAQIOKClRU4qq6mT1tsPqmtd_XMIFw&usqp=CAE"},
+	{name:"shirt",brand:"levis",MRP:2899,img:"https://cdn.shopify.com/s/files/1/0523/3252/7770/products/378-B_300x.jpg?v=1629458227"},
+	{name:"shirt",brand:"puma",MRP:3999,img:"https://cdn.shopify.com/s/files/1/0523/3252/7770/products/443-B_300x.jpg?v=1629455623"},
+	{name:"toys",brand:"levis",MRP:3433,img:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRhV6X4o7GfC20LRmZcQPXJtJ5E7-a9uLi_P_-J_EkBmJ9PtKCA_qwm-ZbhEMu5AnP-fi1TLTOeipuqY7pKKk7uXrHz6RwoUghn4jliPpw&usqp=CAE"},
+	{name:"toys",brand:"levis",MRP:4999,img:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQZrKx-1oQa5UWRKCEwplYE0fV2WF-4gSI7VhVc0sHOlDXWhmHzmYkILPCNy2tgH_LVC9yHoM602gmvWOoGeliBD5qftgaPM_tFdcPiabrm&usqp=CAE"},
+	{name:"shoe",brand:"fasttrack",MRP:2988,img:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTV66Epsf9Xh9C2w1xg8GUEIVFYQ2i3_PK0AYrAudXr5qEnFy9dErVd1babjaVIxThm_x5Msacc42bv-AEvFCjeiGyEXIcfEK-5AO6Sou6Yf_Prvg5Mg6WpLw&usqp=CAE"},
+	{name:"shoe",brand:"rolex",MRP:3990,img:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSf_izVjfm273AooT4ARco2JZrkOAOQgoN2NACsSP_WoKvjhsG3xPGMm_MY-amHjhTXaZZQPdOMyj6WaAYPMK7UeIWHuEvBUPZNeshGpCJXqRv7KHqzyXLD&usqp=CAE"},
 ]     
-   
 var mensdata= [];
 
-mensitems.map(function(item){
+kidsitems.map(function(item){
  
     var mensobj ={
         name:item.name,
@@ -453,7 +455,7 @@ mensitems.map(function(item){
 
      
       var div=document.createElement("div")
-      div.style.backgroundColor="rgb(167, 207, 236)"
+      div.style.backgroundColor="rgb(236, 214, 230)"
 
       var img=document.createElement("img")
         img.setAttribute("src",items.img)
