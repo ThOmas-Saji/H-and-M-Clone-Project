@@ -5,7 +5,7 @@ An e-commerce website known for its fast fashion for men,
 women, teenagers, and children.
 
 <img src="H&m.png" alt="image"/>
-Demo Link:- https://mystifying-hypatia-3f95a1.netlify.app/ <br>
+Live View:- <a href="https://mystifying-hypatia-3f95a1.netlify.app/">H&M</a> <br>
 <br>
 A collaborative project built by a team of 5, executed in 5 days.<br>
 <br>
